@@ -1,0 +1,4 @@
+Each of the folders in subpages is made to store components dedicated to the specific sub-page. 
+Feel free to create components and sub-components for your sub-page in the dedicated folder.
+
+The the final sub-page should be in the Routes directory.
