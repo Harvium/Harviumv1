@@ -9,21 +9,28 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      'nunito': ['"Nunito Sans"', 'sans-serif'],
+      'arvo': ['Arvo', 'serif'],
+    },
     container: {
       center: true,
       padding: "2rem",
       screens: {
+        'mb': '420px',
         "2xl": "1400px",
       },
     },
-    fontFamily: {
-      roboto: ['Roboto'],
-      inter: ['Inter']
-    },
     extend: {
-
+      blur:{
+        '4xl': '200px',
+      },
       boxShadow: {
-        'golden': '2px 0px 20px 12px rgba(255, 215, 0, 0.2)'
+        'md': '0px 0px 10px .1px',
+        'lg': '0px 0px 20px .1px',
+        'xl': '0px 0px 50px .1px',
+        '3xl': '0px 0px 200px .1px',
+        'inner': 'inset 0 0 10px .1px'
       },
 
       width: {
@@ -34,13 +41,8 @@ module.exports = {
         'video-lg': '630px',
         'video-sm': '300px'
       },
-      backgroundColor: {
-        darkGrey: '#1c1c1c',
-      },
-      backgroundImage: () => ({
+      backgroundImage: (theme) => ({
         'background-primary': `linear-gradient(to bottom, #020621, #0B1757, #020621)`,
-        'background-dark-blue-gradient': `linear-gradient(180deg, rgba(2, 6, 35, 0.5) 5.6%, rgba(4, 12, 55, 0.5) 11.1%, rgba(11, 23, 87, 0.5) 22.6%, rgba(17, 30, 104, 0.5) 43.1%, rgba(16, 31, 108, 0.5) 61.6%, rgba(5, 15, 66, 0.5) 84.1%, rgba(2, 6, 33, 0.5) 95.1%);`,
-        'background-to-dark-gradient': `linear-gradient(180deg, rgb(3 6 28 / 50%) 5.6%, rgb(2 5 14 / 50%) 11.1%, rgb(0 0 0 / 50%) 22.6%, rgb(0 0 0) 43.1%, rgb(3 3 3) 61.6%, rgb(0 0 0) 84.1%, rgba(0, 0, 0, 1) 95.1%);`
       }),
       colors: {
         border: "hsl(var(--border))",

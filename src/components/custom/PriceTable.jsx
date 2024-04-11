@@ -26,7 +26,7 @@ export default function PriceTable() {
 
 
   return (
-  <div className="bg-background-primary pr-10 pl-10">
+  <div className="mt-32 pr-10 pl-10">
   <Table className='rounded-lg border-2 border-white mt-20'>
   <TableCaption>A list of your recent invoices.</TableCaption>
   <TableHeader className="bg-black">

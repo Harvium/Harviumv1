@@ -1,10 +1,10 @@
-import React from 'react'
-
 export default function ListaUlug() {
   return (
-    <div className="bg-background-primary flex flex-col justify-center gap-20 px-6">
+    <div className="relative flex flex-col justify-center gap-20 px-6">
+      <span className="h-[600px] w-[200px] left-32 absolute bg-[#262697] blur-4xl -z-10 -rotate-45"></span>
+      <span className="h-[600px] w-[200px] right-32 -bottom-52 absolute bg-[#fba91c60] blur-4xl -z-10 -rotate-45"></span>
         <div className="flex flex-col justify-center px-4 text-white pt-16 text-center">
-            <h2 className='lg:text-5xl text-4xl font-bold items-center gap-6'>Usługi</h2>
+            <h2 className='font-arvo lg:text-5xl text-4xl font-bold items-center gap-6'>Usługi</h2>
             <p className='text-2xl mt-2 non-italic'>Dokładnie tutaj będzie opis naszych usług</p>
         </div>
         <div className='flex flex-row justify-center gap-16 mb-10 mx-5 flex-wrap'>

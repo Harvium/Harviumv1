@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
     <NavBar />
-    <div className="bg-background-primary min-h-[850px] flex md:flex-row flex-col">
+    <div className="flex md:flex-row flex-col">
         <div className="flex flex-col md:w-3/5 md:px-4 text-white">
           <div className='flex flex-col mx-2 md:ml-10 mt-10'>
             <h1 className='lg:text-5xl text-4xl font-bold items-center mt-14 md:gap-6'>O nas</h1>

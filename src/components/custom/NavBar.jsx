@@ -1,44 +1,46 @@
-import React from 'react'
-// import { Button } from '../ui/button'
+import { useState } from 'react';
+import { Button } from '../ui/button';
 
 export default function NavBar() {
-  return (
-    <>
-     <nav className="flex flex-col border-b-2 border-[#302242] sm:flex-row justify-between h-auto sm:h-20 bg-[#080E2D]">
-      <div className="flex items-center justify-center  text-white mb-4 sm:mb-0">
-     <a href="/"><img src='./src/assets/Harvium-Logo.png' className="object-contain h-20 w-[150px] lg:pl-5 pl-0 lg:pt-0 pt-4"></img></a>
-    </div>
-    <div className="flex-grow flex flex-col sm:flex-row items-center justify-between">
-    <div className="flex justify-center text-center flex-grow mb-4 sm:mb-0">
-      <div className="flex flex-col lg:pl-5 sm:flex-row space-y-2 sm:space-y-0 space-x-0 sm:space-x-4">
-        <a href="Handluj" className="text-white hover:text-yellow-300">
-          Handluj
-        </a>
-        <a href="Uslugi" className="text-white hover:text-yellow-300">
-          Usługi
-        </a>
-        <a href="About" className="text-white hover:text-yellow-300">
-          O nas
-        </a>
-        <a href="Products" className="text-white hover:text-yellow-300">
-          Produkty
-        </a>
-        <a href="Contact" className="text-white hover:text-yellow-300">
-          Kontakt
-        </a>
-      </div>
-    </div>
-    <div className="flex lg:flex-row flex-col gap-2 items-center justify-center pb-5 lg:pb-0 lg:pr-5">
-      <button className="transition ease-in-out duration-200 delay-50 md:w-28 w-80 text-sm px-4 py-2 border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white">
-        Logowanie
-      </button>
-      <button className="transition ease-in-out duration-200 delay-50 md:w-28 w-80 text-sm px-4 py-2 border bg-black rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white">
-        Załóż konto
-      </button>
-    </div>
-  </div>
-  </nav>
-    </>
+  const menuOptions = [
+    { content: "Handluj", url: "Handluj" },
+    { content: "Usługi", url: "Uslugi" },
+    { content: "O nas", url: "About" },
+    { content: "Kontakt", url: "Contact" },
+  ];
 
-  )
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    <nav className="fixed z-10 w-full top-0 border-b-2 border-[#322F2F] bg-[#373493] flex justify-center max-[1220px]:pb-4">
+      <div className="w-3/4 flex justify-between items-center max-[1220px]:flex-col">
+        <a href="/">
+          <img src='src/assets/Harvium-Logo.png' alt="Harvium Logo" className="object-contain w-[300px] -ml-2" />
+        </a>
+        <div className="w-2/3 flex gap-4 items-center justify-between max-[1220px]:w-full max-[1220px]:flex-col">
+          <div className={`flex text-lg gap-4 ${isOpen ? 'visible' : 'hidden'}`}>
+            {menuOptions.map((option) => (
+              <a key={option.content} href={option.url} className="transition-all text-white hover:text-yellow-300">
+                {option.content}
+              </a>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <Button variant={"cta"}>HANDLUJ</Button>
+            <Button>Logowanie</Button>
+            <Button>Załóż konto</Button>
+          </div>
+        </div>
+        <div className={`absolute top-10 right-10 hamburger-icon cursor-pointer ${isOpen ? 'hidden' : 'visible'}`} onClick={toggleMenu}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 100 80" fill="white">
+            <rect width="100" height="12"></rect>
+            <rect y="30" width="100" height="12"></rect>
+            <rect y="60" x="40" width="60" height="12"></rect>
+          </svg>
+        </div>
+      </div>
+    </nav>
+  );
 }

@@ -1,12 +1,14 @@
 import React from 'react'
 import NavBar from '../custom/NavBar'
-import Oferta from '../custom/Oferta'
+import Footer from '../custom/Footer'
+import ListaUlug from '../custom/ListaUlug'
 
 export default function ContactUs() {
   return (
     <>
     <NavBar />
-    <Oferta />
+    <ListaUlug />
+    <Footer />
     </>
   )
 }

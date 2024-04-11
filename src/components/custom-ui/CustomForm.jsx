@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import { Button } from '../ui/button'
 
 const FORM_ENDPOINT = "https://forms.zohopublic.eu/harvium/form/HarviumKontakt/formperma/p_g2EZSP148Jb4T5qgwQivEfD_lI-Shg7-OlvRd18wQ/htmlRecords/submit"; // TODO - update to the correct endpoint
 
@@ -97,12 +98,7 @@ const ContactForm = () => {
         />
       </div>
       <div className="pt-0 mb-3 flex justify-center">
-        <button
-          className="active:bg-blue-600 hover:shadow-lg focus:outline-none px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-blue-500 rounded shadow outline-none"
-          type="submit"
-        >
-          Wyślij
-        </button>
+        <Button type="submit">Kup teraz</Button>
       </div>
     </form>
   );
