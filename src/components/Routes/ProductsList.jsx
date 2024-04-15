@@ -11,7 +11,7 @@ function ProductsList() {
     <>
       <div>
         <NavBar />
-        <Listing />
+        <PriceTable />
         <Footer />
       </div>
     </>
