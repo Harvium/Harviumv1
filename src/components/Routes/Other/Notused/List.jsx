@@ -1,6 +1,6 @@
-import React from 'react'
+ {/* import React from 'react'
 
-export default function ListaUlug() {
+export default function List() {
   return (
     <div className="bg-background-primary flex flex-col justify-center gap-20 px-6">
         <div className="flex flex-col justify-center px-4 text-white pt-16 text-center">
@@ -37,3 +37,4 @@ export default function ListaUlug() {
     </div>
   )
 }
+*/}

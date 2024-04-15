@@ -1,51 +1,49 @@
 export const products = [
   {
     id: 1,
-    name: 'Product Name',
+    name: 'Najczęściej handlowane',
     type: 'Varient',
-    price: '50',
   },
   {
     id: 2,
-    name: 'Product Name',
+    name: 'Zboża',
     type: 'Varient',
-    price: '50',
+   
   },
   {
     id: 3,
-    name: 'Product Name',
+    name: 'Produkty roślinne',
     type: 'Varient',
-    price: '50',
+   
   },
   {
     id: 4,
-    name: 'Product Name',
+    name: 'Produkty mleczarskie',
     type: 'Varient',
-    price: '50',
+   
   },
   {
     id: 5,
-    name: 'Product Name',
+    name: 'Półprodukty',
     type: 'Varient',
-    price: '50',
+   
   },
   {
     id: 6,
-    name: 'Product Name',
+    name: 'Pasze',
     type: 'Varient',
-    price: '50',
+  
   },
   {
     id: 7,
-    name: 'Product Name',
+    name: 'Owoce',
     type: 'Varient',
-    price: '50',
   },
   {
     id: 8,
-    name: 'Product Name',
+    name: 'Warzywa',
     type: 'Varient',
-    price: '50',
+    
   },
 ];
 
