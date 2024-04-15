@@ -7,11 +7,6 @@ export default function Presentation() {
     <div className='text-center sm:text-left'>
         <h1 className="text-4xl font-bold items-start gap-6 text-center">Dlaczego Warto z nami handlować ?</h1>
         <p className='mt-2 non-italic text-lg'>Zobacz poniższe wideo, aby dowiedzieć się w jaki sposób możemy wspomóc twój biznes</p>
-        
-        <div className='flex space-x-2 mt-2 justify-center'>
-            <button className="bg-blue-700 text-white px-4 py-2 rounded mt-4 mr-4">Kup teraz</button>
-            <button className="bg-blue-700 text-white px-4 py-2 rounded mt-4 ml-2">Skontaktuj się z nami</button>
-        </div>
     </div>
 
     <div className='flex overflow-hidden mt-2 justify-center shadow-golden'>

@@ -27,9 +27,9 @@ export default function PriceTable() {
 
   return (
   <div className="bg-background-primary pr-10 pl-10">
-  <Table className='rounded-lg border-2 border-white mt-20'>
-  <TableCaption>A list of your recent invoices.</TableCaption>
-  <TableHeader className="bg-black">
+  <Table className='rounded-lg border-2 border-white bg-transparent mt-20'>
+  <TableCaption className="text-left">*Ceny są odświeżane z różną częstotliwością. Pracujemy nad możliwością dostarczania notowań w czasie rzeczywistym</TableCaption>
+  <TableHeader className="bg-violet-950/40">
     <TableRow>
       <TableHead className="w-[50px] text-white">Symbol</TableHead>
       <TableHead className="w-[50px] text-white">Data</TableHead>
@@ -37,7 +37,7 @@ export default function PriceTable() {
       <TableHead className="w-[50px] text-white">Zmiana</TableHead>
     </TableRow>
   </TableHeader>
-  <TableBody className="bg-transparent">
+  <TableBody className="bg-violet-950/40">
     {data.map((row,index) => 
     <TableRow className="text-white">
       <TableCell className="font-medium text-white">{row.Symbol}</TableCell>

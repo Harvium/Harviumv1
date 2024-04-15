@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../custom/NavBar'
 import Footer from '../custom/Footer'
+import ServiceMap from "@/components/Routes/About us/serviceMap/serviceMap.jsx";
 
 export default function About() {
   return (
@@ -30,6 +31,7 @@ export default function About() {
             <img src='src/assets/kimjestesmy.png' className='scale-75'></img>
         </div>  
     </div>
+    <ServiceMap />
     <Footer />
     </>
   )
