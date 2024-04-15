@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import NavBar from '../custom/NavBar';
-import Footer from '../custom/Footer';
-import ProductCarousel from '../sub-components/ProductCarousel';
+import NavBar from '../../custom/NavBar';
+import Footer from '../../custom/Footer';
+import ProductCarousel from '../../sub-components/ProductCarousel';
 import { Plus, Minus } from 'lucide-react';
 import {
   Breadcrumb,
@@ -248,14 +248,14 @@ const ProductDetailPage = () => {
           </div>
 
           <div className='flex flex-1 flex-col gap-4'>
-            <img src='src/assets/Product_2.png' alt='product' />
+            <img src='src/assets/Product_2.svg' alt='product' />
 
             <div className='grid grid-cols-5 hidden md:grid gap-4'>
-              <img src='src/assets/Product_2.png' alt='product' />
-              <img src='src/assets/Product_2.png' alt='product' />
-              <img src='src/assets/Product_2.png' alt='product' />
-              <img src='src/assets/Product_2.png' alt='product' />
-              <img src='src/assets/Product_2.png' alt='product' />
+              <img src='src/assets/Product_2.svg' alt='product' />
+              <img src='src/assets/Product_2.svg' alt='product' />
+              <img src='src/assets/Product_2.svg' alt='product' />
+              <img src='src/assets/Product_2.svg' alt='product' />
+              <img src='src/assets/Product_2.svg' alt='product' />
             </div>
           </div>
         </div>

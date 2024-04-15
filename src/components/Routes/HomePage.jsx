@@ -1,12 +1,12 @@
 import NavBar from "../custom/NavBar";
-import Header from "../custom/Header";
-import Presentation from "../custom/Presentation";
+import Presentation from "./Home/Content/Presentation";
 import Services from "../custom/Services";
 import PriceTable from "../custom/PriceTable";
 import Footer from "../custom/Footer";
-import Oferta from "../custom/Oferta";
-import ListaUlug from "../custom/ListaUlug";
-import ContactUs from "../custom/ContactUs";
+import Cont0 from "./Home/Content/Cont0";
+import Cont2 from "./Home/Content/Cont2";
+import Oferta from "./Other/Notused/Offer";
+import ContactUs from "./Contact/ContactUs";
 
 function App() {
 
@@ -14,9 +14,9 @@ function App() {
     <>
       <div>
         <NavBar />
-        <Header />
+        <Cont0 />
         <Presentation />
-        <ListaUlug />
+        <Cont2 />
         <PriceTable />
         <ContactUs />
         <Footer />
