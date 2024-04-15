@@ -49,7 +49,7 @@ const ProductPage = () => {
                   justifyContent: 'center',
                 }}
               >
-                View all
+                Zobacz wszystkie
 
               </a>
         </div>
