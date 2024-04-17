@@ -7,7 +7,7 @@ export default function ServicesDescription2() {
 <Reveal>
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
     <div className="mx-auto max-w-lg text-center">
-      <h2 className="text-5xl font-bold sm:text-4xl">Usługi</h2>
+      <h2 className="text-4xl font-bold sm:text-4xl">Usługi</h2>
 
       <p className="mt-4 text-lg text-gray-300">
         Oferujemy kompleksową obsługę przedsiębiorstw rolniczych, spożywczych, handlowych i przemysłowych. Jeżeli nie widzisz określonej usługi lub produktu to skontaktuj się z nami.
