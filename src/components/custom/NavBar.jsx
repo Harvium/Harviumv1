@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 // import { Button } from '../ui/button'
 
 export default function NavBar() {
@@ -7,7 +8,7 @@ export default function NavBar() {
   <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div className="flex h-16 items-center justify-between">
     <div className="md:flex md:items-center md:gap-12">
-        <a className="block text-teal-600 dark:text-teal-600" href="/">
+        <Link className="block text-teal-600 dark:text-teal-600" to="/">
           <span className="sr-only">Home</span>
           <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424 135" width="180" height="57">
 	<title>Harvium-Logo</title>
@@ -18,7 +19,7 @@ export default function NavBar() {
 	</style>
 	<use id="Background" href="#img1" x="34" y="35"/>
 </svg>
-        </a>
+        </Link>
       </div>
 
       <div className="hidden md:block">
@@ -26,66 +27,66 @@ export default function NavBar() {
           
           <ul className="flex items-center gap-6 text-sm">
             <li></li><li>
-              <a
+              <Link
                 className="text-white transition hover:text-yellow-300 dark:text-white dark:hover:text-white/75"
-                href="Trade"
+                to="/Trade"
               >
                 Handluj
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
-                href="Services"
+                to="/Services"
               >
                 Usługi
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
-                href="Products"
+                to="/Products"
               >
                 Produkty
-              </a>
+              </Link>
             </li>
 
             <li >
-              <a
+              <Link
                 className="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75 whitespace-nowrap"
-                href="About"
+                to="/About"
               >
                 O nas
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
-                href="Contact"
+                to="/Contact"
               >
                 Kontakt
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
-                href="#"
+                to="/#"
               >
                 Blog
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
-                href="PrecisionFarming"
+                to="/PrecisionFarming"
               >
                 Rolnictwo precyzyjne
-              </a>
+              </Link>
             </li>
 
             <li></li>
@@ -95,20 +96,20 @@ export default function NavBar() {
 
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
-          <a
+          <Link
             className="rounded-md bg-white px-5 py-2.5 text-sm font-medium text-navyblue shadow dark:hover:bg-teal-500"
-            href="#"
+            to="/#"
           >
             Logowanie
-          </a>
+          </Link>
 
           <div className="hidden sm:flex">
-            <a
+            <Link
               className="rounded-md bg-#080E2D-100 px-5 py-2.5 text-sm font-medium text-white dark:bg-#080E2D-800 dark:text-white dark:hover:text-white/75"
-              href="#"
+              to="/#"
             >
               Rejestracja
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -136,66 +137,66 @@ export default function NavBar() {
 
       <ul className="absolute left-0 mt-2 space-y-1 px-4 bg-white shadow-lg rounded-lg">
         <li>
-          <a
-            href="Trade"
+          <Link
+            to="/Trade"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-yellow-400"
           >
             Handluj
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href="Services"
+          <Link
+            to="/Services"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             Usługi
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href="Products"
+          <Link
+            to="/Products"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             Produkty
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href="About"
+          <Link
+            to="/About"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             O nas
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href="Contact"
+          <Link
+            to="/Contact"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             Kontakt
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href="#"
+          <Link
+            to="/#"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             Blog
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href="#"
+          <Link
+            to="/#"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             Rolnictwo precyzyjne
-          </a>
+          </Link>
         </li>
 
          {/*
