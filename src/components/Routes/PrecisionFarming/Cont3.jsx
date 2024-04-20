@@ -1,4 +1,5 @@
 import Reveal from "@/components/animations/reveal/reveal";
+import sentielimg from "/src/assets/sentinel.png"
 
 export default function Cont4() {
     return (
@@ -11,7 +12,7 @@ export default function Cont4() {
         <div className="relative h-64 sm:h-80 lg:h-full">
           <img
             alt=""
-            src="src/assets/sentinel.png"
+            src={sentielimg}
             className="absolute inset-0 h-full w-full h-auto border-2 border-white/10"
           />
         </div>

@@ -1,3 +1,4 @@
+import arrow from '/src/assets/arrow.png';
 import Reveal from "@/components/animations/reveal/reveal";
 
 export default function Cont1() {
@@ -151,7 +152,7 @@ export default function Cont1() {
           className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
         >
           Więcej informacji o usługach
-          <img src='/src/assets/arrow.png' className='h-4 w-4 ml-2' />
+          <img src={arrow} className='h-4 w-4 ml-2' />
         </a>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import Reveal from "@/components/animations/reveal/reveal";
+import mapaOpisImg from "/src/assets/opis_mapy.png";
 
 export default function Cont5() {
     return (
@@ -8,7 +9,7 @@ export default function Cont5() {
   <div className="mx-auto max-w-screen-xl rounded-lg overflow-hidden lg:h-full py-8 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-8">
     <img
       alt=""
-      src="src/assets/opis_mapy.png"
+      src={mapaOpisImg}
       className="h-full object-cover"
     />
   </div>

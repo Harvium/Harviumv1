@@ -1,3 +1,5 @@
+import headerphoto from '/src/assets/headerphoto.png';
+
 export default function Cont0() {
   return (
     <section className="bg-background-primary">
@@ -6,7 +8,7 @@ export default function Cont0() {
           <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
             <img
               alt=""
-              src="./src/assets/headerphoto.png"
+              src={headerphoto}
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>

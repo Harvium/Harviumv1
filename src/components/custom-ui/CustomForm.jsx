@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FORM_ENDPOINT = "https://forms.zohopublic.eu/harvium/form/HarviumKontakt/formperma/p_g2EZSP148Jb4T5qgwQivEfD_lI-Shg7-OlvRd18wQ/htmlRecords/submit";
+const FORM_ENDPOINT = "https://forms.zohopublic.eu/harvium/form/Harviumcontactadvanced/formperma/AgCvkIthc5NbK9It5XDVVY8n-wvQ-7eBiToQ61LCg9g/htmlRecords/submit";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
