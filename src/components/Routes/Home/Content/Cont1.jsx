@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Cont1() {
     return (
 
@@ -14,13 +15,13 @@ export default function Cont1() {
       </p>
 
       <div className="mt-4 md:mt-8">
-        <a
-          href="#"
+        <Link
+          to="/Trade"
           className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
         >
           Kup teraz
           <img src='/src/assets/arrow.png' className='h-4 w-4 ml-2' />
-        </a>
+        </Link>
       </div>
     </div>
   </div>

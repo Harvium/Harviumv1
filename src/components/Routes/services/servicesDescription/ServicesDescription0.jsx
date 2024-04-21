@@ -1,4 +1,5 @@
 import Reveal from "@/components/animations/reveal/reveal";
+import { Link } from 'react-router-dom';
 
 export default function ServicesDescription2() {
     return (
@@ -15,9 +16,9 @@ export default function ServicesDescription2() {
     </div>
 
     <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <a
-        className="bg-transparent bg-violet-950/40 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-yellow-500/10 hover:shadow-yellow-500/10"
-        href="#"
+      <Link
+      to="/Trade"
+      className="bg-transparent bg-violet-950/40 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-yellow-500/10 hover:shadow-yellow-500/10"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,11 +35,11 @@ export default function ServicesDescription2() {
         <p className="mt-1 text-small text-gray-300">
         Budujemy najbardziej zaawansowaną platformę na świecie do handlu produktami rolniczymi i przemysłowymi.
         </p>
-      </a>
+      </Link>
 
-      <a
+      <Link
+        to="/Contact"
         className="bg-transparent bg-violet-950/40 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-yellow-500/10 hover:shadow-yellow-500/10"
-        href="#"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +58,11 @@ export default function ServicesDescription2() {
         <p className="mt-1 text-medium text-gray-300">
         Łączymy dostawców z potencjalnymi rynkami zbytu zapewniając przy tym transparentność cen.
         </p>
-      </a>
+      </Link>
 
-      <a
+      <Link
+      to="/Trade"
         className="bg-transparent bg-violet-950/40 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-yellow-500/10 hover:shadow-yellow-500/10"
-        href="#"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -79,11 +80,11 @@ export default function ServicesDescription2() {
         <p className="mt-1 text-medium text-gray-300">
         Dzięki nam uzyskasz dostęp do bieżących notowań, szybciej zauważysz nadchodzące trendy oraz uzyskasz dostęp do rzetelnych informacji.
         </p>
-      </a>
+      </Link>
 
-      <a
+      <Link
+      to="/Trade"
         className="bg-transparent bg-violet-950/40 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-yellow-500/10 hover:shadow-yellow-500/10"
-        href="#"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -100,11 +101,11 @@ export default function ServicesDescription2() {
         <p className="mt-1 text-medium text-gray-300">
         Docelowo stworzymy monitoring cen produktów rolnych i przemysłowych na światowych rynkach. Na chwilę obecną jesteśmy w stanie dostarczyć monitoring wybranych dla Ciebie cen produktów.
         </p>
-      </a>
+      </Link>
 
-      <a
+      <Link
+      to="/Contact"
         className="bg-transparent bg-violet-950/40 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-yellow-500/10 hover:shadow-yellow-500/10"
-        href="#"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -121,11 +122,11 @@ export default function ServicesDescription2() {
         <p className="mt-1 text-medium text-gray-300">
         Wkrótce uruchomimy dział obsługi Klienta, który będzie dostępny 24/7. Obecnie możesz się z nami skontaktować mailowo lub poprzez social media.
         </p>
-      </a>
+      </Link>
 
-      <a
+      <Link
+      to="/PrecisionFarming"
         className="bg-transparent bg-violet-950/40 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-yellow-500/10 hover:shadow-yellow-500/10"
-        href="#"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +143,7 @@ export default function ServicesDescription2() {
         <p className="mt-1 text-medium text-gray-300">
         Zapewniamy dla każdego przyjazny dostęp do danych z satelitów Sentinel 2 i innych. Są one nieocenionym narzędziem w rękach rolników, handlowców produktów rolnych oraz innych uczestników agrobiznesu.
         </p>
-      </a>
+      </Link>
     </div>
   </div>
   </Reveal>

@@ -1,5 +1,6 @@
 import Reveal from "@/components/animations/reveal/reveal";
 import mapaOpisImg from "/src/assets/opis_mapy.png";
+import { Link } from 'react-router-dom';
 
 export default function Cont5() {
     return (
@@ -14,7 +15,7 @@ export default function Cont5() {
     />
   </div>
   <div className="max-w-xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8" >
-      <h2 className="text-3xl font-bold sm:text-4xl">Grupa docelowa </h2>
+      <h2 className="text-3xl font-bold sm:text-4xl text-center">Grupa docelowa </h2>
 
       <p className="text-lg mt-4 text-white">
       Nasze usługi są skierowane przede wszystkim do:
@@ -30,8 +31,8 @@ export default function Cont5() {
       </p>
     </div>
     <div className="mt-4 md:mt-8 flex justify-center">
-              <a
-                href="Contact"
+              <Link
+                to="Contact"
                 className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
                 style={{
                   display: 'flex',
@@ -40,7 +41,7 @@ export default function Cont5() {
               >
                 Skontaktuj się z nami
 
-              </a>
+              </Link>
             </div>
 </Reveal>
 
