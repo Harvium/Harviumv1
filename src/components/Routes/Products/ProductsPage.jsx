@@ -39,7 +39,7 @@ const ProductPage = () => {
             {products.map((product) => (
               <ProductItem
                 name={product.name}
-                image={product.image === 'product' ? newProduct : product}
+                image={product.image}
                 key={product.id}
               />
             ))}
