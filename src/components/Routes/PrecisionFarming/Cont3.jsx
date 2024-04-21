@@ -1,5 +1,6 @@
 import Reveal from "@/components/animations/reveal/reveal";
 import sentielimg from "/src/assets/sentinel.png"
+import { Link } from 'react-router-dom';
 
 export default function Cont4() {
     return (

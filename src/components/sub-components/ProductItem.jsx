@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import product from '/src/assets/product.svg';
+import product2 from '/src/assets/product2.svg';
 
-const ProductItem = ({ name, type, price }) => {
+const ProductItem = ({ name, type, price, image }) => {
   const navigate = useNavigate();
 
   return (
     <div className='flex flex-col gap-4' onClick={() => navigate('../Contact')}>
-      <img src={product} alt='product' />
+      <img src={image} alt='product' />
 
       <div className='flex flex-col gap-2'>
         <div>

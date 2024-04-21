@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 
 export default function Footer() {
@@ -7,15 +9,13 @@ export default function Footer() {
   <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-6 sm:px-6 lg:space-y-16 lg:px-8">
     <div className="sm:flex sm:items-center sm:justify-between">
       <div className="text-white-600 dark:text-white-300">
-      <span className="flex justify-center items-center"><a href="/"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424 135" width="180" height="57">
-	<title>Harvium-Logo</title>
+      <span className="flex justify-center items-center"><Link to="/"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424 135" width="180" height="57">
+	<title>Naciśnij i przekieruję Cię na stronę główną - Jesteśmy dla Ciebie</title>
 	<defs>
-		<image  width="355" height="75" id="img1" href="data:image/png;base64,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"/>
+		<image  width="355" height="75" id="img1" source="data:image/png;base64,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"/>
 	</defs>
-	<style>
-	</style>
 	<use id="Background" href="#img1" x="34" y="35"/>
-</svg></a></span>
+</svg></Link></span>
       </div>
 
       <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
@@ -104,21 +104,21 @@ export default function Footer() {
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="/Trade" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Handel
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
-              Blog
-            </a>
+            <Link to="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+              Niezależne źródło informacji
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="/PrecisionFarming" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Rolnictwo precyzyjne
-            </a>
+            </Link>
           </li>
 
         </ul>
@@ -129,21 +129,21 @@ export default function Footer() {
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="/About" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               O nas
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="/About" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Nasza misja
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -153,21 +153,21 @@ export default function Footer() {
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="/Contact" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Kontakt
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+          <Link to="/FAQ" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               FAQs
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
-              Chat
-            </a>
+            <Link to="https://www.facebook.com/profile.php?id=61557065762827" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+              Porozmawiaj z nami na Facebooku
+            </Link>
           </li>
         </ul>
       </div>
@@ -177,21 +177,21 @@ export default function Footer() {
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="/TermsOfUse" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Warunki świadczenia usług
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Regulamin
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
-              Bezpieczeństwo i ubezpieczenie
-            </a>
+            <Link to="/Cookies" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+              Cookies
+            </Link>
           </li>
 
         </ul>

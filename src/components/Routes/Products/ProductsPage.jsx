@@ -4,7 +4,9 @@ import ProductTable from '../../sub-components/ProductTable';
 import ProductItem from '../../sub-components/ProductItem';
 import Reveal from "@/components/animations/reveal/reveal.jsx";
 import Reveal2 from "@/components/animations/reveal/reveal2.jsx";
+import { Link } from 'react-router-dom';
 import { products, productUsers } from './ProductData.js';
+
 
 const ProductPage = () => {
   return (
@@ -37,12 +39,13 @@ const ProductPage = () => {
             {products.map((product) => (
               <ProductItem
                 name={product.name}
+                image={product.image === 'product' ? newProduct : product}
                 key={product.id}
               />
             ))}
           </div>
-          <a
-                href="Contact"
+          <Link
+                to="/Trade"
                 className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
                 style={{
                   display: 'flex',
@@ -51,7 +54,7 @@ const ProductPage = () => {
               >
                 Zobacz wszystkie
 
-              </a>
+              </Link>
         </div>
         </Reveal2>
           <Reveal>
@@ -62,11 +65,11 @@ const ProductPage = () => {
               <h2 className='lg:text-5xl text-4xl font-bold'>
                 Nie widzisz określonego produktu?
               </h2>
-              <a href="Contact" className='text-lg non-italic'>
+              <Link to="Contact" className='text-lg non-italic'>
                 Skontaktuj się z nami. Jesteśmy dla Ciebie.
-              </a>
-              <a
-                href="Contact"
+              </Link>
+              <Link
+                to="Contact"
                 className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
                 style={{
                   display: 'flex',
@@ -75,7 +78,7 @@ const ProductPage = () => {
               >
                 Kontakt
 
-              </a>
+              </Link>
             </div>
           </div>
           

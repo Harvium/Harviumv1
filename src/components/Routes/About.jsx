@@ -4,6 +4,7 @@ import Footer from '../custom/Footer'
 import ServiceMap from "@/components/Routes/About us/serviceMap/serviceMap.jsx";
 import kimjestesmyImg from '/src/assets/kimjestesmy.png';
 
+
 export default function About() {
   return (
     <>

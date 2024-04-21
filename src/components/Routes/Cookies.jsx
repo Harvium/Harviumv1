@@ -1,14 +1,14 @@
 import React from 'react'
 import NavBar from '../custom/NavBar'
+import Cookies1 from './Cookies/Cookies1'
 import Footer from '../custom/Footer'
-import TermsOfUse1 from './TermsOfUse/TermsOfUse1'
 
-export default function TermsOfUse() {
+export default function ContactPage() {
   return (
-    <div>
+    <>
       <NavBar />
-      <TermsOfUse1 />
+      <Cookies1 />
       <Footer />
-    </div>
+    </>
   )
 }
