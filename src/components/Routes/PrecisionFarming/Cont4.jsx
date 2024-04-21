@@ -6,7 +6,7 @@ export default function Cont4() {
 
 <section className="bg-background-primary text-white">
 <Reveal>
-<div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+<div className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
     <div className="flex items-center justify-center max-w-xl mx-auto">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold sm:text-4xl mt-4">Oferujemy precyzyjne narzędzia dla rolnictwa
