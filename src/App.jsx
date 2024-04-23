@@ -2,7 +2,7 @@ import ContactPage from './components/Routes/ContactPage';
 import HomePage from './components/Routes/HomePage';
 import ProductsList from './components/Routes/ProductsList';
 import About from './components/Routes/About';
-import Services from './components/Routes/services';
+import Services from './components/Routes/Services';
 import TermsOfUse from './components/Routes/TermsOfUse';
 import ProductPage from './components/Routes/Products/ProductsPage';
 import ProductDetailPage from './components/Routes/Products/ProductDetailPage';
