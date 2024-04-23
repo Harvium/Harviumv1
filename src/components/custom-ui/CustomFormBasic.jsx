@@ -53,7 +53,7 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
             <p className="max-w-xl text-2xl text-purple-800 font-bold">
-            Nie widzisz określonego produktu?
+            Nie widzisz określonego produktu, który Cię interesuje?
             </p>
             <p className="mt-2 text-lg not-italic text-white">
             Poszukujesz najlepszej ceny na rynku? Potrzebujesz indywidualnej obsługi?

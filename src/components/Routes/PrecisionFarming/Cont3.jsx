@@ -25,7 +25,7 @@ export default function Cont4() {
 
         <div className="p-8 sm:p-16 lg:p-24">
           <h2 className="text-3xl font-bold sm:text-3xl">
-          Satelity Sentinel 2 – nowoczesne oko w niebie dla rolnictwa
+          Satelity Sentinel 2 – nowoczesne oko na świat, niezbędne dla współczesnego rolnictwa
           </h2>
 
           <p className="mt-4 text-white text-justify">
