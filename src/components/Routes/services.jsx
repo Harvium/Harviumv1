@@ -1,9 +1,9 @@
 import NavBar from '../custom/NavBar.jsx'
 import Footer from '../custom/Footer.jsx'
 import ServicesDescription2 from "/src/components/Routes/services/servicesDescription/ServicesDescription0.jsx";
-import ServicesDescription from "/src/components/Routes/services/servicesDescription/servicesDescription.jsx";
+import ServicesDescription from "/src/components/Routes/services/servicesDescription/ServicesDescription.jsx";
 
-const Services = () => {
+export default function Services () {
   return (
     <>
       <NavBar />
@@ -16,4 +16,3 @@ const Services = () => {
     </>
   )
 }
-export default Services
