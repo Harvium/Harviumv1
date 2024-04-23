@@ -32,7 +32,7 @@ export default function Cont5() {
     </div>
     <div className="mt-4 md:mt-8 flex justify-center">
               <Link
-                to="Contact"
+                to="/Contact"
                 className="inline-flex items-center rounded-full bg-purple-800 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
                 style={{
                   display: 'flex',
