@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FORM_ENDPOINT = "https://forms.zohopublic.eu/harvium/form/Harviumcontactadvanced/formperma/AgCvkIthc5NbK9It5XDVVY8n-wvQ-7eBiToQ61LCg9g/htmlRecords/submit";
+const FORM_ENDPOINT = 'https://forms.zohopublic.eu/harvium/form/HarviumKontakt/formperma/p_g2EZSP148Jb4T5qgwQivEfD_lI-Shg7-OlvRd18wQ/htmlRecords/submit';
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -33,6 +33,7 @@ const ContactForm = () => {
       })
       .catch((err) => {
         // Submit the form manually
+        console.log(err)
         e.target.submit();
       });
   };
@@ -67,12 +68,13 @@ const ContactForm = () => {
 
 
           <div className="rounded-lg bg-blue p-8 shadow-lg lg:col-span-3 lg:p-12">
-            <form action="#" className="space-y-4">
+            <form action={FORM_ENDPOINT} method="POST" onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label className="sr-only" htmlFor="Name_first">Name_first</label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    name="Name_First"
                     placeholder="Imię"
                     type="text"
                     id="Name_first"
@@ -80,9 +82,10 @@ const ContactForm = () => {
                 </div>
 
                 <div>
-                  <label className="sr-only" htmlFor="Name_Last">Name_last</label>
+                  <label className="sr-only" name="Name_Last" htmlFor="Name_Last">Name_last</label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    name="Name_Last"
                     placeholder="Nazwisko"
                     type="text"
                     id="Name_last"
@@ -93,6 +96,7 @@ const ContactForm = () => {
                 <label className="sr-only" htmlFor="Company_Name">Company_Name</label>
                 <input
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                  name="SingleLine"
                   placeholder="Nazwa firmy"
                   type="text"
                   id="Company_Name"
@@ -105,6 +109,7 @@ const ContactForm = () => {
                   <label className="sr-only" htmlFor="email">Email</label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    name="Email"
                     placeholder="Adres email"
                     type="email"
                     id="email"
@@ -115,6 +120,7 @@ const ContactForm = () => {
                   <label className="sr-only" htmlFor="PhoneNumber_countrycode">Phone</label>
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    name="PhoneNumber_countrycodeval"
                     placeholder="Numer telefonu"
                     type="tel"
                     id="PhoneNumber_countrycode"
@@ -154,6 +160,7 @@ const ContactForm = () => {
 
                 <textarea
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                  name="MultiLine"
                   placeholder="Wpisz tutaj swoją wiadomość, a jeżeli oczekujesz kontaktu telefonicznego to wypełnij pole z numerem telefonu..."
                   rows="8"
                   id="message"

@@ -1,12 +1,12 @@
 import React from 'react';
-import CustomForm from '../../custom-ui/CustomForm.jsx';
+import CustomFormBasic from '../../custom-ui/CustomFormBasic.jsx';
 
 
 
 export default function ContactUs() {
   return (
     
-    <CustomForm />
+    <CustomFormBasic />
     
   )
 }
