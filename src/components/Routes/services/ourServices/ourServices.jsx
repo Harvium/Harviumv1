@@ -1,4 +1,4 @@
-import Service from "@/components/Routes/services/ourServices/service/service.jsx";
+import Service from "@/components/Routes/services/ourServices/service/Service.jsx";
 import serviceIcon from "@/assets/services/serviceDefaultIcon.png"
 import { Link } from 'react-router-dom';
 
