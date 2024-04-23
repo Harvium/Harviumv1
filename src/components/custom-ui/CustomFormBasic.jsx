@@ -55,14 +55,14 @@ const ContactForm = () => {
             <p className="max-w-xl text-2xl text-purple-800 font-bold">
             Nie widzisz określonego produktu?
             </p>
-            <p className="mt-2 text-xl not-italic text-white">
+            <p className="mt-2 text-lg not-italic text-white">
             Poszukujesz najlepszej ceny na rynku? Potrzebujesz indywidualnej obsługi?
             </p>
 
             <div className="mt-8">
               <p className="text-2xl font-bold text-purple-800">Jesteśmy dla Ciebie.</p>
 
-              <p className="mt-2 text-xl not-italic text-white">Skorzystaj z formularza, a my zatroszczymy się o profesjonalną obsługę Twojego zgłoszenia.</p>
+              <p className="mt-2 text-lg not-italic text-white">Skorzystaj z formularza, a my zatroszczymy się o profesjonalną obsługę Twojego zgłoszenia.</p>
             </div>
           </div>
 
