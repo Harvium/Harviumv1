@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../custom/NavBar'
 import ContactUs from './Contact/ContactUs'
+import ContactFooter from './Contact/ContactFooter'
 import Footer from '../custom/Footer'
 
 export default function ContactPage() {
@@ -8,6 +9,7 @@ export default function ContactPage() {
     <>
       <NavBar />
       <ContactUs />
+      <ContactFooter />
       <Footer />
     </>
   )
