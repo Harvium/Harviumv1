@@ -27,7 +27,7 @@ const ProductPage = () => {
         <Reveal2>
         <div className='flex flex-col justify-center items-center px-5 md:px-16 py-16 md:py-28 text-white text-center gap-20'>
           <div className='flex flex-col justify-center '>
-            <h2 className='lg:text-5xl text-4xl font-bold items-center gap-6'>
+            <h2 className='lg:text-4xl text-4xl font-bold items-center gap-6'>
               Kategorie produktów
             </h2>
             <p className='text-2xl mt-2 non-italic'>
@@ -62,7 +62,7 @@ const ProductPage = () => {
           <div className='flex flex-col justify-center items-start gap-4 text-white'>
             
             <div className='flex flex-col gap-6'>
-              <h2 className='lg:text-5xl text-4xl font-bold'>
+              <h2 className='lg:text-4xl text-4xl font-bold'>
                 Nie widzisz określonego produktu?
               </h2>
               <Link to="Contact" className='text-lg non-italic'>

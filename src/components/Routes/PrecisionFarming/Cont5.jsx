@@ -26,14 +26,14 @@ export default function Cont5() {
       <li>Interesariuszy agrobiznesu: Wspierają w podejmowaniu decyzji na podstawie rzetelnych danych satelitarnych.</li>
       </ul>
         <br/>
-      <p className="text-2xl mt-4 text-violet-700 text-center">
+      <p className="text-2xl mt-4 text-purple-800 text-center font-bold">
       Chcesz dowiedzieś się wiecej?
       </p>
     </div>
     <div className="mt-4 md:mt-8 flex justify-center">
               <Link
                 to="Contact"
-                className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                className="inline-flex items-center rounded-full bg-purple-800 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
                 style={{
                   display: 'flex',
                   justifyContent: 'center',

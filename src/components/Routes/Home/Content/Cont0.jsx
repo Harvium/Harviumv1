@@ -16,7 +16,7 @@ export default function Cont0() {
           </div>
 
           <div className="lg:py-24 text-white">
-            <h2 className="text-5xl font-bold">Handluj z nami</h2>
+            <h2 className="text-4xl font-bold">Handluj z nami</h2>
 
             <p className="text-lg mt-4 text-white" style={{textAlign: 'justify'}}>
               Harvium jest nowoczesną platformą do kompleksowej obsługi zleceń na całym świecie.
