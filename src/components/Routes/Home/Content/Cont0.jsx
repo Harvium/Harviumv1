@@ -1,4 +1,5 @@
 import headerphoto from '/src/assets/headerphoto.png';
+import arrow from '/src/assets/arrow.png';
 import { Link } from 'react-router-dom';
 
 export default function Cont0() {
@@ -32,7 +33,8 @@ export default function Cont0() {
                 }}
               >
                 Kup teraz
-                <img src="src/assets/arrow.png" className="h-4 w-4 ml-2" />
+                <img alt=""
+              src={arrow} className="h-4 w-4 ml-2" />
 
               </Link>
             </div>
