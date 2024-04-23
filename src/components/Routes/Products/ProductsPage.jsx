@@ -69,7 +69,7 @@ const ProductPage = () => {
                 Skontaktuj się z nami. Jesteśmy dla Ciebie.
               </Link>
               <Link
-                to="Contact"
+                to="/Contact"
                 className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
                 style={{
                   display: 'flex',
