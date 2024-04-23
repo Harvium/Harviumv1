@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import sphereMap from '@/assets/services/sphereMap.png'
+import world from '@/assets/services/world.svg'
 import {positionGeometry} from "three/nodes";
 
 const useSphere = () => {
@@ -9,7 +9,7 @@ const useSphere = () => {
     useEffect(() => {
         const textureLoader = new THREE.TextureLoader()
 
-        const normalTexture = textureLoader.load(sphereMap)
+        const normalTexture = textureLoader.load(world)
         // Canvas
         const canvas = canvasRef?.current
 
@@ -20,27 +20,27 @@ const useSphere = () => {
         const geometry = new THREE.SphereGeometry(0.80, 64, 64)
         // Materials
         const material = new THREE.MeshStandardMaterial()
-        material.metalness = 1
-        material.roughness = 0.07
+        material.metalness = 0
+        material.roughness = 0
         material.normalMap = normalTexture
 
-        material.color = new THREE.Color(0xffffff)
+        material.color = new THREE.Color(0x7B0BA2)
         // Mesh
         const sphere = new THREE.Mesh(geometry, material)
         scene.add(sphere)
         // Lights
-        const pointLight = new THREE.PointLight(0xfffff, 0.1)
+        const pointLight = new THREE.PointLight(0x0F4604, 0.1)
         pointLight.position.x = 2
         pointLight.position.y = 3
         pointLight.position.z = 4
         scene.add(pointLight)
         //LIGHT 2
-        const pointLight2 = new THREE.PointLight(0xff80, 0)
+        const pointLight2 = new THREE.PointLight(0x3C1B4B, 0)
         pointLight2.position.set(-1.86, 1, -0.5)
         pointLight2.intensity = 5
         scene.add(pointLight2)
         //LIGHT3
-        const pointLight3 = new THREE.PointLight(0xc1fb3, 0)
+        const pointLight3 = new THREE.PointLight(0x3C1B4B, 0)
         pointLight3.position.set(1.3, -1.2, 1)
         pointLight3.intensity = 5
         scene.add(pointLight3)
