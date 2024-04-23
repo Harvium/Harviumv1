@@ -1,6 +1,6 @@
 import NavBar from "../custom/NavBar";
 import Footer from "../custom/Footer";
-import Listing from "../custom/Listing";
+import ContactUs from "./Contact/ContactUs";
 import PriceTable from "../custom/PriceTable";
 
 
@@ -12,6 +12,7 @@ function ProductsList() {
       <div>
         <NavBar />
         <PriceTable />
+        <ContactUs />
         <Footer />
       </div>
     </>
