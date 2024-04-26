@@ -20,7 +20,7 @@ const ProductPage = () => {
           </h2>
           <Reveal>
           <p className='text-2xl mt-2 non-italic'>
-            Odkryj świat możliwości handlowych z nami.
+            Odkryj z nami świat możliwości handlowych.
           </p>
           </Reveal>
         </div>
