@@ -6,6 +6,8 @@ import Map3 from "./Map3.jsx"
 import SimpleMapComponent from './SimpleMapComponent.jsx';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import './Map.css';
+import ButtonLight from '@/components/custom/Buttons/ButtonLight.jsx';
 
 const Cont6 = () => {
     const [showMap, setShowMap] = useState(false); // Stan do kontrolowania widoczności mapy
@@ -13,19 +15,22 @@ const Cont6 = () => {
     return (
         <section className="bg-background-primary text-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
             <Reveal>
-                <div className="max-w-xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold sm:text-4xl">
+                <div className="mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 text-center">
+                
+                    <h2 className="text-3xl font-bold sm:text-4xl mb-4">
                         Wypróbuj za darmo nasze mapy
                     </h2>
                     <button
                         onClick={() => setShowMap(!showMap)} // Przełączanie widoczności mapy
-                        className="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+                        className="mt-4 bg-yellow-900 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full mb-8 border border-white"
                     >
-                        Mapy Demo
+                        Mapa demo
                     </button>
-                    {showMap && <Map3 />} 
+                    {showMap && <div className="map-container"><Map3 /></div>} 
                 </div>
             </Reveal>
+            
+
         </section>
     );
 };
