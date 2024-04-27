@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
+import ButtonTrade from './Buttons/ButtonTrade';
 // import { Button } from '../ui/button'
 
 export default function NavBar() {
@@ -24,13 +24,10 @@ export default function NavBar() {
       <div className="hidden md:block">
         <nav aria-label="Global">
           
-          <ul className="flex items-center gap-6 text-sm">
-            <li></li><li>
-              <Link
-                className="text-white transition hover:text-yellow-300 dark:text-white dark:hover:text-white/75"
-                to="/Trade"
-              >
-                Handluj
+          <ul className="flex items-center gap-6 text-sm">    
+            <li>
+              <Link to="/Trade">
+                <ButtonTrade>Handluj</ButtonTrade>
               </Link>
             </li>
 
