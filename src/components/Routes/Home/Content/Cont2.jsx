@@ -150,7 +150,7 @@ export default function Cont1() {
     <div className="mt-12 text-center">
     <Link
           to="Services"
-          className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+          className="inline-flex items-center rounded-full bg-purple-900 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-800 focus:outline-none focus:ring focus:ring-yellow-400"
         >
           Więcej informacji o usługach
           <img src={arrow} className='h-4 w-4 ml-2' />
