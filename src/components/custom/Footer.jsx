@@ -165,9 +165,9 @@ export default function Footer() {
           </li>
 
           <li>
-            <Link to="https://www.facebook.com/profile.php?id=61557065762827" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <a href="http://m.me/226791260525743" target="_blank" rel="noreferrer" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Porozmawiaj z nami na Facebooku
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
