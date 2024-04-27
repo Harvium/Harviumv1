@@ -110,7 +110,7 @@ export default function Footer() {
           </li>
 
           <li>
-            <Link to="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="http://blog.harvium.pl/" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Niezależne źródło informacji
             </Link>
           </li>
@@ -165,9 +165,9 @@ export default function Footer() {
           </li>
 
           <li>
-            <a href="http://m.me/226791260525743" target="_blank" rel="noreferrer" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="http://m.me/226791260525743" target="_blank" rel="noreferrer" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               Porozmawiaj z nami na Facebooku
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

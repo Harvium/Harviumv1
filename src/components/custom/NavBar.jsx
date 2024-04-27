@@ -73,9 +73,9 @@ export default function NavBar() {
             <li>
               <Link
                 className="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
-                to="/#"
+                to="http://blog.harvium.pl/"
               >
-                Blog
+                Wiadomości
               </Link>
             </li>
 
@@ -181,11 +181,10 @@ export default function NavBar() {
                       </li>
 
                       <li>
-                        <Link
-                          to="/#"
+                        <Link to="http://blog.harvium.pl/"
                           className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
-                          Blog
+                          Wiadomości
                         </Link>
                       </li>
 
