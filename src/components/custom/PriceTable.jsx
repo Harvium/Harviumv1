@@ -67,14 +67,14 @@ export default function PriceTable() {
           
         </div>
         <div className="pr-10 pl-10 ">
-          <div className="grid xl:grid-cols-2 grid-flow-col gap-5 justify-center items-center w-auto">
-            <div className="relative xl:inline-flex overflow-hidden bg-violet-950/30 border divide-x rounded-sm text-white">
+          <div className="grid xl:grid-cols-2 grid-flow-col gap-3 justify-center items-center w-auto">
+            <div className="relative xl:inline-flex overflow-hidden w-full bg-violet-950/30 border divide-x rounded-sm text-white">
               <div className="block xl:hidden">
                 <ul className="space-y-1 text-center">
                   <li>
                     <details className="group relative ">
-                      <summary className="flex cursor-pointer items-center justify-between px-2 py-2 text-white hover:bg-gray-100 hover:text-gray-700 min-w-max">
-                          <span className="text-xs font-medium"> Kategorie produktów </span>
+                      <summary className="flex cursor-pointer items-center w-full px-2 py-2 text-white hover:bg-gray-100 hover:text-gray-700 min-w-max text-center justify-center">
+                          <span className="text-sm font-medium"> Kategorie </span>
                           <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -124,13 +124,14 @@ export default function PriceTable() {
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Żywiec</button>
                 </div>
             </div>
-            <div>
+            <div className="w-full md:w-1/2">
               <input
                 type="text"
                 placeholder="Szukaj..."
                 onChange={(event) => {
                   setSearchTerm(event.target.value);
                 }}
+                className="w-full"
               />
             </div>
           </div>
