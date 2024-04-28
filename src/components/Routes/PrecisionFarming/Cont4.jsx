@@ -27,8 +27,8 @@ export default function Cont4() {
         </span>
 
         <div>
-          <h2 className="text-lg font-bold">Mapy NDVI (Normalized Difference Vegetation Index)</h2>
-
+          <h2 className="text-lg font-bold">Mapy Normalized Difference Vegetation Index</h2>
+          <br/>
           <p className="mt-1 text-sm text-gray-300">
           Te mapy są używane do oceny zdrowia i kondycji roślinności, pozwalając na szybką interwencję w przypadku wykrycia problemów.
           </p>
