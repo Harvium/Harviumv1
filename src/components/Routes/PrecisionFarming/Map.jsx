@@ -72,7 +72,7 @@ const MapComponent = () => {
   return (
     <div>
       <div id="mapid" style={{ height: '600px' }}></div>
-      <button onClick={showTradingMap}>Trade Map</button>
+      <button onClick={showTradingMap}>Open Street Map</button>
       <button onClick={showAgroMap}>Agro Map</button>
     </div>
   );
