@@ -16,12 +16,18 @@ export default function PriceTable() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortConfig, setSortConfig] = useState(null);
   const [category, setCategory] = useState('all');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios.get('https://7g3fm3diw6.execute-api.eu-central-1.amazonaws.com/DEV/ProductPrices')
       .then((response) => {
         setData(response.data);
-      });
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+        setIsLoading(false);
+      })
   }, []);
 
   const sortedData = React.useMemo(() => {
@@ -51,7 +57,7 @@ export default function PriceTable() {
   return (
     
     <section className="px-4 mx-auto bg-background-primary ">
-      
+       
         <div className='flex flex-col justify-center px-5 md:px-16 py-16 md:py-12 text-white text-center'>
           <h2 className='lg:text-2xl text-2xl font-bold items-center gap-6'>
             Handluj
@@ -101,10 +107,10 @@ export default function PriceTable() {
                             <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('x')}>
                               Produkty rolnicze
                             </button>
-                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('x')}>
+                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('diary')}>
                               Produkty mleczarskie
                             </button>
-                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('x')}>
+                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('semi_product')}>
                               Półprodukty
                             </button>
                             <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('x')}>
@@ -119,8 +125,8 @@ export default function PriceTable() {
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('all')}>Popularne</button>
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Indeksy</button>
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Produkty rolnicze</button>
-                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Produkty mleczarskie</button>
-                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Półprodukty</button>
+                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('diary')}>Produkty mleczarskie</button>
+                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('semi_product')}>Półprodukty</button>
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Żywiec</button>
                 </div>
             </div>
@@ -135,7 +141,9 @@ export default function PriceTable() {
               />
             </div>
           </div>
-
+            {isLoading ? (
+              <div>Loading...</div> // This can be any loading indicator you want
+            ):(
               <Table className='rounded-lg border-2 border-white mt-5'>
                 <TableCaption className="text-left">*Ceny są odświeżane z różną częstotliwością. Pracujemy nad możliwością dostarczania notowań w czasie rzeczywistym.</TableCaption>
                 <TableHeader className="bg-violet-950/30">
@@ -156,7 +164,7 @@ export default function PriceTable() {
                 </TableRow>
               </TableHeader>
               <TableBody className="bg-violet-950/35">
-                {sortedData.filter((row) => row.ProductName.toLowerCase().includes(searchTerm.toLowerCase()) && (category === 'all' || row.category === category)).map((row,index) => 
+                {sortedData.filter((row) => row.ProductName.toLowerCase().includes(searchTerm.toLowerCase()) && (category === 'all' || row.Category === category)).map((row,index) => 
                 <TableRow className="text-white">
                   <TableCell className="font-medium text-white">  <Link to={`/product/${row.ProductName}`}>
         {row.ProductName}
@@ -170,6 +178,7 @@ export default function PriceTable() {
                       )}
               </TableBody>
             </Table>
+            )}
       </div>
     </section>
   )
