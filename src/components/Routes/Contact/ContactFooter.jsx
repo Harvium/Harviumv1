@@ -8,7 +8,7 @@ export default function ContactFooter() {
     <div className="container px-6 py-12 mx-auto">
         <div className="text-center">
         
-        <Link to="/FAQ" className="font-medium text-purple-800">Najczęściej zadawane pytania - kliknij tutaj.</Link>
+        <Link to="/FAQ" className="font-medium text-yellow-500">Najczęściej zadawane pytania - kliknij tutaj.</Link>
             <h1 className="mt-2 text-2xl font-semibold text-white">Skontaktuj się z nami</h1>
 
             <p className="mt-3 text-white">Zespół naszych ekspertów jest zawsze w gotowości, aby odpowiedzieć na Twoje pytania.</p>

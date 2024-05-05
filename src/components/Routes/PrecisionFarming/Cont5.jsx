@@ -11,7 +11,7 @@ export default function Cont5() {
     <img
       alt=""
       src={mapaOpisImg}
-      className="h-full object-cover"
+      className="h-full object-contain"
     />
   </div>
   <div className="max-w-xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8" >
