@@ -97,6 +97,7 @@ const useSphere = () => {
         const controls = new OrbitControls(camera, renderer.domElement)
         controls.enableDamping = true
         controls.rotateSpeed = 0.5  // Lower values will slow down the rotation speed
+        controls.enableZoom = false  // Disable zoom
 
         //Animate
         const tick = async () => {
