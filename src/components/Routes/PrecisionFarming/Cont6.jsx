@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import Reveal from "@/components/animations/reveal/reveal";
-import Map from "./Map.jsx"
-import Map2 from "./Map2.jsx"
 import Map3 from "./Map3.jsx"
-import SimpleMapComponent from './SimpleMapComponent.jsx';
-import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './Map.css';
-import ButtonLight from '@/components/custom/Buttons/ButtonLight.jsx';
 
 const Cont6 = () => {
     const [showMap, setShowMap] = useState(false); // Stan do kontrolowania widoczności mapy
@@ -22,11 +17,11 @@ const Cont6 = () => {
                     </h2>
                     <button
                         onClick={() => setShowMap(!showMap)} // Przełączanie widoczności mapy
-                        className="mt-4 bg-yellow-900 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full mb-8 border border-white"
+                        className="mt-4 bg-yellow-900 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full mb-8"
                     >
                         Mapa demo
                     </button>
-                    {showMap && <div className="map-container"><Map3 /></div>} 
+                    {showMap && <div className="map-container m-4"><Map3 /></div>} 
                 </div>
             </Reveal>
             

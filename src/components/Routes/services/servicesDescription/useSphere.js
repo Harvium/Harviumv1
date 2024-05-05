@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import world from '@/assets/services/world.svg'
-import {positionGeometry} from "three/nodes";
 
 const useSphere = () => {
     const canvasRef = useRef(null)
@@ -24,25 +24,30 @@ const useSphere = () => {
         material.roughness = 0
         material.normalMap = normalTexture
 
-        material.color = new THREE.Color(0x7B0BA2)
+        material.color = new THREE.Color(0x470257)
         // Mesh
         const sphere = new THREE.Mesh(geometry, material)
         scene.add(sphere)
         // Lights
-        const pointLight = new THREE.PointLight(0x0F4604, 0.1)
+        const pointLight = new THREE.PointLight(0xFFFFFF, 0)
         pointLight.position.x = 2
         pointLight.position.y = 3
         pointLight.position.z = 4
         scene.add(pointLight)
+         //LIGHT 1
+         const pointLight1 = new THREE.PointLight(0xFFFFFF, 0)
+         pointLight1.position.set(-1.86, 1, -0.5)
+         pointLight1.intensity = 1
+         scene.add(pointLight1)
         //LIGHT 2
-        const pointLight2 = new THREE.PointLight(0x3C1B4B, 0)
+        const pointLight2 = new THREE.PointLight(0xFFFFFF, 0)
         pointLight2.position.set(-1.86, 1, -0.5)
-        pointLight2.intensity = 5
+        pointLight2.intensity = 1
         scene.add(pointLight2)
         //LIGHT3
-        const pointLight3 = new THREE.PointLight(0x3C1B4B, 0)
+        const pointLight3 = new THREE.PointLight(0xFFFFFF, 0)
         pointLight3.position.set(1.3, -1.2, 1)
-        pointLight3.intensity = 5
+        pointLight3.intensity = 1
         scene.add(pointLight3)
 
         //Sizes
@@ -61,7 +66,6 @@ const useSphere = () => {
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
         })
 
-        // Base camera
         const camera = new THREE.PerspectiveCamera(
             50,
             sizes.width / sizes.height,
@@ -70,7 +74,7 @@ const useSphere = () => {
         )
         camera.position.x = 0
         camera.position.y = 0
-        camera.position.z = 2
+        camera.position.z = 2.1
         scene.add(camera)
 
         const renderer = new THREE.WebGLRenderer({
@@ -80,41 +84,39 @@ const useSphere = () => {
         renderer.setSize(sizes.width, sizes.height)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
+           // Mesh for the satellite
+           //const satelliteGeometry = new THREE.SphereGeometry(0.05, 32, 32)
+           //const satelliteMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 })
+           //const satellite = new THREE.Mesh(satelliteGeometry, satelliteMaterial)
+           //scene.add(satellite)
+   
+           // Position the satellite
+           //satellite.position.set(1, 0, 0)
+
+        // Add OrbitControls
+        const controls = new OrbitControls(camera, renderer.domElement)
+        controls.enableDamping = true
+        controls.rotateSpeed = 0.5  // Lower values will slow down the rotation speed
+
         //Animate
-
-        const onDocumentMouseMove = () => {
-            mouseX = event.clientX - windowX
-            mouseY = event.clientY - windowY
-        }
-
-        document.addEventListener('mousemove', onDocumentMouseMove)
-        let mouseX = 0
-        let mouseY = 0
-        let targetX = 0
-        let targetY = 0
-
-        const windowX = window.innerWidth / 2
-        const windowY = window.innerHeight / 2
-
-
-        const clock = new THREE.Clock()
-
         const tick = async () => {
-            targetX = mouseX * 0.0003
-            targetY = mouseY * 0.0003
+            // Update OrbitControls
+            controls.update()
+         
+        // Automatic rotation
+        sphere.rotation.y += 0.005   
 
-            const elapsedTime = clock.getElapsedTime()
-            // Update objects
-            sphere.rotation.y = 0.2 * elapsedTime
-            sphere.rotation.y += 0.2 * (targetX - sphere.rotation.y)
-            sphere.rotation.x += 0.05 * (targetY - sphere.rotation.x)
-            sphere.position.z += -0.05 * (targetY - sphere.rotation.x)
+         // Move the satellite in a circular orbit around the sphere
+         //const time = Date.now() * 0.001
+         //satellite.position.x = Math.cos(time) * 1
+         //satellite.position.y = Math.sin(time) * 1
 
-            // Render
-            renderer.render(scene, camera)
+        // Render
+                renderer.render(scene, camera)
 
-            window.requestAnimationFrame(tick)
-        }
+                window.requestAnimationFrame(tick)
+        
+     }
 
         tick()
     }, [])

@@ -1,5 +1,5 @@
 import Reveal from "@/components/animations/reveal/reveal";
-import sentielimg from "/src/assets/sentinel.png"
+import sentinelimg from "/src/assets/sentinel.png"
 import { Link } from 'react-router-dom';
 
 export default function Cont4() {
@@ -13,10 +13,10 @@ export default function Cont4() {
         <div className="relative h-64 sm:h-80 lg:h-full">
           <img
             alt=""
-            src={sentielimg}
-            className="absolute inset-0 h-full w-full h-auto border-2 border-white/10"
+            src={sentinelimg}
+            className="absolute inset-0 h-full w-full object-contain"
           />
-        </div>
+          </div>
         </div>
       <div className="relative flex items-center bg-violet-950/30">
         <span
