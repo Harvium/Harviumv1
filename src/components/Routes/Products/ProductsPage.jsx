@@ -59,13 +59,13 @@ const ProductPage = () => {
         </Reveal2>
           <Reveal>
         <div className='flex flex-col px-5 md:px-16 py-16 md:py-28 gap-20'>
-          <div className='flex flex-col justify-center items-start gap-4 text-white'>
+          <div className='flex flex-col justify-center items-center gap-4 text-white'>
             
-            <div className='flex flex-col gap-6'>
+            <div className='text-center flex flex-col gap-6'>
               <h2 className='lg:text-4xl text-4xl font-bold'>
                 Nie widzisz określonego produktu?
               </h2>
-              <Link to="Contact" className='text-lg non-italic'>
+              <Link to="Contact" className=' text-lg non-italic'>
                 Skontaktuj się z nami. Jesteśmy dla Ciebie.
               </Link>
               <Link
