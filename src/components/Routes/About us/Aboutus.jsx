@@ -5,8 +5,8 @@ export default function Aboutus() {
     <section className="bg-background-primary text-white">
 	<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl pb-28">
 		<div>
-			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl text-white">Kim jesteśmy?</h2>
-			<p className="max-w-3xl mx-auto mt-4 text-xl text-center text-white">Jesteśmy firmą handlową, która powstała tak naprawdę w trakcie Akademii przy Europejskim Kongresie Finansowym, kiedy to zastanawialiśmy się jak pomóc mniejszym rolnikom w sprzedaży ich produktów. Tak powstała odpowiedź w postaci Harvium - firmy, która specjalizuje się w kompleksowej obsłudze i realizacji transakcji z branży rolniczej, spożywczej oraz surowcowej. Mamy wszystko czego twój biznes potrzebuje do zawierania bezpiecznych i zyskownych transakcji. </p>
+			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-3xl text-white">Kim jesteśmy?</h2>
+			<p className="max-w-4xl mx-auto mt-4 text-xl text-center text-white">Jesteśmy firmą handlową, która powstała tak naprawdę w trakcie Akademii przy Europejskim Kongresie Finansowym, kiedy to zastanawialiśmy się jak pomóc mniejszym rolnikom w sprzedaży ich produktów. Tak powstała odpowiedź w postaci Harvium - firmy, która specjalizuje się w kompleksowej obsłudze i realizacji transakcji z branży rolniczej, spożywczej oraz surowcowej. Mamy wszystko czego twój biznes potrzebuje do zawierania bezpiecznych i zyskownych transakcji. </p>
 		</div>
 		<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 			<div>
