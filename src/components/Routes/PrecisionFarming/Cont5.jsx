@@ -5,52 +5,73 @@ import { Link } from 'react-router-dom';
 export default function Cont5() {
     return (
 
-<section className="bg-background-primary text-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
-<Reveal>
-  <div className="mx-auto max-w-screen-xl rounded-lg overflow-hidden lg:h-full py-8 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-8">
-    <img
-      alt=""
-      src={mapaOpisImg}
-      className="h-full object-contain"
-    />
-  </div>
-  <div className="max-w-xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8" >
-      <h2 className="text-3xl font-bold sm:text-4xl text-center">Grupa docelowa </h2>
 
-      <p className="text-lg mt-4 text-white text-center font-medium">
-      Nasze usługi są skierowane przede wszystkim do:
-      </p>
-      <ul className="list-disc ml-8 mt-8">
-        <li>Rolników: Pomagają monitorować i optymalizować prace w gospodarstwie rolnym.</li>
-
-        <li className="mt-4">Handlowców produktów rolnych: Dostarczają informacji pomocnych w planowaniu zakupów i sprzedaży.</li>
-
-        <li className="mt-4">Interesariuszy agrobiznesu: Wspierają w podejmowaniu decyzji na podstawie rzetelnych danych satelitarnych.</li>
-      </ul>
-        <br/>
-      <p className="text-2xl mt-4 text-purple-800 text-center font-bold">
-      Chcesz dowiedzieś się wiecej?
-      </p>
-    </div>
-    <div className="mt-4 md:mt-8 flex justify-center">
-              <Link
-                to="/Contact"
-                className="inline-flex items-center rounded-full bg-purple-800 px-20 py-4 text-medium font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                }}
-              >
-                Skontaktuj się z nami
-
-              </Link>
+<section className="bg-background-primary text-white">
+  <Reveal>
+	<div className="container flex flex-col mx-auto lg:flex-row">
+        <div className="lg:w-1/2 xl:w-3/5 bg-background-primary">
+            <div className="flex items-center justify-center p-4 md:p-8 lg:p-12">
+                <img
+                alt=""
+                src={mapaOpisImg}
+                className="h-full object-contain"
+              />
             </div>
-</Reveal>
+          </div>
+		<div className="flex flex-col px-6 py-8 space-y-14 rounded-sm sm:p-8 lg:p-14 lg:w-1/2 xl:w-2/5 bg-violet-950/30 text-white">
+			<div className="flex space-x-2 sm:space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
 
+				<div className="space-y-2">
+					<p className="text-lg font-medium leading-snug">NDVI</p>
+					<p className="leading-snug">Normalized Difference Vegetation Index określa kondycję roślinności. Przyjmuje wartości od -1 do 1, gdzie wartości bliższe 1, oznaczają roślinność w lepszym stanie.</p>
+				</div>
+			</div>
+			<div className="flex space-x-2 sm:space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
+				<div className="space-y-2">
+					<p className="text-lg font-medium leading-snug">True color composite</p>
+					<p className="leading-snug">Używany do monitorowania stanu upraw, analizowania kondycji roślinności oraz wykrywania zmian w pokryciu terenu.</p>
+				</div>
+			</div>
+			<div className="flex space-x-2 sm:space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
+				<div className="space-y-2">
+					<p className="text-lg font-medium leading-snug">NDWI</p>
+					<p className="leading-snug">Normalized Difference Water Index używany do identyfikacji i monitorowania zawartości wody w roślinności i glebie. W rolnictwie jest stosowany do oceny wilgotności gleby i stanu nawodnienia roślin, co pozwala na optymalizację nawadniania i zarządzanie ryzykiem suszy.</p>
+				</div>
+			</div>
+      <div className="flex space-x-2 sm:space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
 
+				<div className="space-y-2">
+					<p className="text-lg font-medium leading-snug">Dane spersonalizowane</p>
+					<p className="leading-snug">Na specjalne życzenie dostarczymy inne produkty w tym dane o najwyższej dostępnej rozdzielczości.</p>
+				</div>
+			</div>
+      <div className="flex space-x-2 sm:space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
+
+				<div className="space-y-2">
+					<p className="text-lg font-medium leading-snug">Dedykowana mapa</p>
+					<p className="leading-snug">Znajdziesz tu wszystkie dane oraz produkty które pozwolą użytkownikowi wejść na wyższy poziom w monitorowaniu ryzyk i maksymalizacji zysków.</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+  </Reveal>
 </section>
-
-
 
 )
 }
