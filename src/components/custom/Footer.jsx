@@ -100,7 +100,7 @@ export default function Footer() {
       className="grid grid-cols-1 gap-8 border-t border-white-100 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16 dark:border-white-800"
     >
       <div>
-        <p className="font-medium text-white-900 dark:text-white">Usługi</p>
+        <p className="font-medium text-white-900 text-lg dark:text-white">Usługi</p>
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
@@ -125,7 +125,7 @@ export default function Footer() {
       </div>
 
       <div>
-        <p className="font-medium text-white-900 dark:text-white">O firmie</p>
+        <p className="font-medium text-white-900 text-lg dark:text-white">O firmie</p>
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
@@ -141,7 +141,7 @@ export default function Footer() {
           </li>
 
           <li>
-            <Link to="#" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
+            <Link to="/About" className="text-white-700 transition hover:opacity-75 dark:text-white-200">
               
             </Link>
           </li>
@@ -149,7 +149,7 @@ export default function Footer() {
       </div>
 
       <div>
-        <p className="font-medium text-white-900 dark:text-white">Pomocne linki</p>
+        <p className="font-medium text-white-900 text-lg dark:text-white">Pomocne linki</p>
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
@@ -173,7 +173,7 @@ export default function Footer() {
       </div>
 
       <div>
-        <p className="font-medium text-white-900 dark:text-white">Informacje</p>
+        <p className="font-medium text-white-900 text-lg dark:text-white">Informacje</p>
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>

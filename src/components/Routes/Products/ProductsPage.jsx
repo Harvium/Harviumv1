@@ -1,6 +1,5 @@
 import NavBar from '../../custom/NavBar';
 import Footer from '../../custom/Footer';
-import ProductTable from '../../sub-components/ProductTable';
 import ProductItem from '../../sub-components/ProductItem';
 import Reveal from "@/components/animations/reveal/reveal.jsx";
 import Reveal2 from "@/components/animations/reveal/reveal2.jsx";
@@ -65,7 +64,7 @@ const ProductPage = () => {
               <h2 className='lg:text-4xl text-4xl font-bold'>
                 Nie widzisz określonego produktu?
               </h2>
-              <Link to="Contact" className=' text-lg non-italic'>
+              <Link to="/Contact" className=' text-lg non-italic'>
                 Skontaktuj się z nami. Jesteśmy dla Ciebie.
               </Link>
               <Link
