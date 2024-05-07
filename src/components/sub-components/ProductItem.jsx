@@ -43,7 +43,7 @@ const ProductItem = ({ name, type, price, image }) => {
   }
 
   return (
-    <div className='flex flex-col gap-4' onClick={() => navigate('../Contact')}>
+    <div className='flex flex-col gap-4' onClick={() => navigate('../Trade')}>
       <img src={productImage} alt='product' />
        {/* use productImage here */}
       <div className='flex flex-col gap-2'>
