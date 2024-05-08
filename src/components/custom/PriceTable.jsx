@@ -17,11 +17,25 @@ export default function PriceTable() {
   const [sortConfig, setSortConfig] = useState(null);
   const [category, setCategory] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
-
+/*
   useEffect(() => {
     axios.get('https://7g3fm3diw6.execute-api.eu-central-1.amazonaws.com/DEV/ProductPrices')
       .then((response) => {
         setData(response.data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+        setIsLoading(false);
+      })
+  }, []); */
+
+
+  useEffect(() => {
+    fetch('./src/Data/test_data.json')
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -101,10 +115,10 @@ export default function PriceTable() {
                             <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('all')}>
                               Popularne
                             </button>
-                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('x')}>
+                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('commodity')}>
                               Indeksy
                             </button>
-                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('x')}>
+                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('grain')}>
                               Produkty rolnicze
                             </button>
                             <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('diary')}>
@@ -113,7 +127,7 @@ export default function PriceTable() {
                             <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('semi_product')}>
                               Półprodukty
                             </button>
-                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('x')}>
+                            <button className="block rounded-lg px-4 py-2 text-center text-sm text-white hover:bg-gray-50 hover:text-gray-700" onClick={() => setCategory('livestock')}>
                               Żywiec
                             </button>
                           </div>
@@ -123,11 +137,11 @@ export default function PriceTable() {
               </div>
                 <div className="hidden xl:flex divide-x items-center">
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('all')}>Popularne</button>
-                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Indeksy</button>
-                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Produkty rolnicze</button>
+                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('commodity')}>Indeksy</button>
+                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('grain')}>Produkty rolnicze</button>
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('diary')}>Produkty mleczarskie</button>
                   <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('semi_product')}>Półprodukty</button>
-                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('x')}>Żywiec</button>
+                  <button className="px-4 py-2 font-medium transition-colors duration-200 sm:text-sm text-center" onClick={() => setCategory('livestock')}>Żywiec</button>
                 </div>
             </div>
             <div className="w-full md:w-1/2">
@@ -171,7 +185,7 @@ export default function PriceTable() {
       </Link></TableCell>
                   <TableCell className="text-white">{row.Data}</TableCell>
                   <TableCell className="text-white">{row.AvgPrice}</TableCell>
-                  <TableCell className="text-green-500">0.2%</TableCell>
+                  <TableCell className="text-yellow-500">{row.PercentChange}%</TableCell>
                   <TableCell className="text-white">{row.AvgPrice}</TableCell>
                   <TableCell className="text-white">{row.AvgPrice}</TableCell>
                 </TableRow>
