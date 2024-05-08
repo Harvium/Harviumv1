@@ -17,7 +17,7 @@ export default function PriceTable() {
   const [sortConfig, setSortConfig] = useState(null);
   const [category, setCategory] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
-/*
+
   useEffect(() => {
     axios.get('https://7g3fm3diw6.execute-api.eu-central-1.amazonaws.com/DEV/ProductPrices')
       .then((response) => {
@@ -28,11 +28,12 @@ export default function PriceTable() {
         console.error("Error fetching data: ", error);
         setIsLoading(false);
       })
-  }, []); */
+  }, []); 
 
 
+  /*
   useEffect(() => {
-    fetch('./src/Data/test_data.json')
+    fetch('../Data/test_data.json')
       .then(response => response.json())
       .then(data => {
         setData(data);
@@ -43,6 +44,7 @@ export default function PriceTable() {
         setIsLoading(false);
       })
   }, []);
+  */
 
   const sortedData = React.useMemo(() => {
     let sortableData = [...data];
