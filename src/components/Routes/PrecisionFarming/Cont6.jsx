@@ -3,6 +3,7 @@ import Reveal from "@/components/animations/reveal/reveal";
 import Map from "./Map.jsx"
 import Map2 from "./Map2.jsx"
 import Map3 from "./Map3.jsx"
+// import Map_time_slider from "./Map_time_slider.jsx"
 import SimpleMapComponent from './SimpleMapComponent.jsx';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
