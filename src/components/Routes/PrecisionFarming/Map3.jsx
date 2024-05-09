@@ -48,7 +48,7 @@ const MapComponent = () => {
 
   const buttonStyle = (layer) => ({
     backgroundColor: activeLayer === layer ? 'rgba(255, 215, 0, 0.8)' : 'rgba(9, 14, 46, 0.7)',
-    color: 'white',
+    color: activeLayer === layer ? 'black' : 'white', // Change text color to black when active
     border: 'none',
     padding: '6px 10px',
     margin: '2px 0',
@@ -77,6 +77,9 @@ const MapComponent = () => {
 };
 
 export default MapComponent;
+
+
+
 
 
 
