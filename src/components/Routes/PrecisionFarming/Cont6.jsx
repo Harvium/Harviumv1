@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Reveal from "@/components/animations/reveal/reveal";
 import Map3 from "./Map3.jsx"
+// import Map_time_slider from "./Map_time_slider.jsx"
 import 'leaflet/dist/leaflet.css';
 import './Map.css';
 

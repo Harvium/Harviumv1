@@ -188,8 +188,8 @@ export default function PriceTable() {
                   <TableCell className="text-white">{row.Data}</TableCell>
                   <TableCell className="text-white">{row.AvgPrice}</TableCell>
                   <TableCell className="text-yellow-500">{row.PercentChange}%</TableCell>
-                  <TableCell className="text-white">{row.AvgPrice}</TableCell>
-                  <TableCell className="text-white">{row.AvgPrice}</TableCell>
+                  <TableCell className="text-white">{(row.AvgPrice * 1.05).toFixed(2)}</TableCell>
+                  <TableCell className="text-white">{(row.AvgPrice * 0.95).toFixed(2)}</TableCell>
                 </TableRow>
                       )}
               </TableBody>
