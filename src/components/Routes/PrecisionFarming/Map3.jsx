@@ -5,9 +5,9 @@ import 'leaflet/dist/leaflet.css';
 const MapComponent = () => {
   const mapRef = useRef(null);
   const layersRef = useRef({
-    base: null, NDVI: null, SWIR: null, TrueColor: null, SoilIndex: null, MoistureIndex: null
+    Podstawowa: null, NDVI: null, SWIR: null, TrueColor: null, SoilIndex: null, MoistureIndex: null
   });
-  const [activeLayer, setActiveLayer] = useState('base');
+  const [activeLayer, setActiveLayer] = useState('Podstawowa');
 
   useEffect(() => {
     if (!mapRef.current) {
@@ -16,19 +16,19 @@ const MapComponent = () => {
         zoom: 13
       });
 
-      layersRef.current.base = createLayer('base', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', '© OpenStreetMap contributors');
+      layersRef.current.Podstawowa = createLayer('Podstawowa', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', '© OpenStreetMap contributors');
       layersRef.current.NDVI = createLayer('NDVI');
       layersRef.current.SWIR = createLayer('SWIR');
       layersRef.current.TrueColor = createLayer('NATURAL-COLOR');
       layersRef.current.SoilIndex = createLayer('AGRICULTURE');
       layersRef.current.MoistureIndex = createLayer('MOISTURE-INDEX');
 
-      layersRef.current.base.addTo(mapRef.current); // Add the base layer by default
+      layersRef.current.Podstawowa.addTo(mapRef.current); // Add the Podstawowa layer by default
     }
   }, []);
 
   function createLayer(id, url = "https://services.sentinel-hub.com/ogc/wms/e19be309-87d1-4bae-b14d-652549395b29", attribution = 'Data © Sentinel Hub | Satellite data © Copernicus') {
-    return id === 'base' ? L.tileLayer(url, { attribution }) : L.tileLayer.wms(url, {
+    return id === 'Podstawowa' ? L.tileLayer(url, { attribution }) : L.tileLayer.wms(url, {
       layers: id,
       format: 'image/png',
       transparent: true,
@@ -66,7 +66,7 @@ const MapComponent = () => {
     <div>
       <div id="mapid" style={{ width: '100%', height: '100vh' }}></div>
       <div style={{ position: 'absolute', top: '100px', left: '10px', zIndex: 1000, padding: '5px' }}>
-        {['base', 'NDVI', 'SWIR', 'TrueColor', 'SoilIndex', 'MoistureIndex'].map((layer) =>
+        {['Podstawowa', 'NDVI', 'SWIR', 'TrueColor', 'SoilIndex', 'MoistureIndex'].map((layer) =>
           <button key={layer} style={buttonStyle(layer)} onClick={() => switchLayer(layer)}>
             {layer.replace(/([A-Z])/g, ' $1').trim()}  {/* Add spaces before capital letters for better readability */}
           </button>
