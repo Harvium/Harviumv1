@@ -148,18 +148,21 @@ let time1 = Date.now() * 0.00053  // Adjust this value to change the speed
 satellite1.position.x = Math.cos(time1 + degToRad(25)) * radius
 satellite1.position.y = Math.sin(time1 + degToRad(25)) * radius
 satellite1.position.z = 0
+satellite1.lookAt(0,0,0)
 
 // Satellite 2 moves in the yz plane
 let time2 = Date.now() * 0.00031  // Adjust this value to change the speed
 satellite2.position.x = 0
 satellite2.position.y = Math.sin(time2 + degToRad(25)) * radius
 satellite2.position.z = Math.cos(time2 + degToRad(20)) * radius
+satellite2.lookAt(0,0,0)
 
 // Satellite 3 moves in the xz plane
 let time3 = Date.now() * 0.00042  // Adjust this value to change the speed
 satellite3.position.x = Math.cos(time3 + degToRad(25)) * radius
 satellite3.position.y = 0
 satellite3.position.z = Math.sin(time3 + degToRad(20)) * radius
+satellite3.lookAt(0,0,0)
     }
         // Render
                 renderer.render(scene, camera)
