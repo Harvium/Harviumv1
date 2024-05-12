@@ -95,7 +95,7 @@ const useSphere = () => {
     const loader = new GLTFLoader()
     let satellite1, satellite2, satellite3
 
-loader.load('src/assets/services/Satellite.glb', (gltf) => {
+loader.load('@/assets/services/Satellite.glb', (gltf) => {
     satellite1 = gltf.scene.clone()
     satellite2 = gltf.scene.clone()
     satellite3 = gltf.scene.clone()
