@@ -1,5 +1,5 @@
 import Reveal from "@/components/animations/reveal/reveal";
-import mapaOpisImg from "/src/assets/opis_mapy.png";
+import mapaOpisImg from "@/assets/opis_mapy.png";
 import { Link } from 'react-router-dom';
 
 export default function Cont5() {

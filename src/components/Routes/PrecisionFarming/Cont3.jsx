@@ -1,5 +1,5 @@
 import Reveal from "@/components/animations/reveal/reveal";
-import sentinelimg from "/src/assets/sentinel.png"
+import sentinelimg from "@/assets/sentinel.png"
 import { Link } from 'react-router-dom';
 
 export default function Cont4() {
