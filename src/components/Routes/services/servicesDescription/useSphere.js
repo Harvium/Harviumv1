@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import world from '@/assets/services/world.jpg'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import sateliteGLB from '@/assets/services/Satellite.glb'
 
 
 const useSphere = () => {
@@ -96,7 +97,7 @@ const useSphere = () => {
     let satellite1, satellite2, satellite3
 
 
-loader.load('src/assets/Satellite.glb', (gltf) => {
+loader.load(sateliteGLB, (gltf) => {
 
     satellite1 = gltf.scene.clone()
     satellite2 = gltf.scene.clone()
