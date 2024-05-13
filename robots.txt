@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /Trade
+Allow: /Services
+Allow: /About
+Allow: /Products
+Allow: /Contact
+Allow: /PrecisionFarming
