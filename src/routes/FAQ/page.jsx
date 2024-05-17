@@ -1,3 +1,4 @@
+// FAQ page
 
 import { Link } from 'react-router-dom';
 

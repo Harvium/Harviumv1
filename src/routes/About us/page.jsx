@@ -1,3 +1,5 @@
+// About us page
+
 import React from 'react'
 import NavBar from '../custom/NavBar'
 import Footer from '../custom/Footer'

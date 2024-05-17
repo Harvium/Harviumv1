@@ -1,7 +1,7 @@
 import React from 'react'
-import NavBar from '../custom/NavBar'
+import NavBar from '/src/components/custom/NavBar.jsx'
 import FAQ1 from './FAQ/FAQ1'
-import Footer from '../custom/Footer'
+import Footer from '/src/components/custom/Footer.jsx'
 
 export default function ContactPage() {
   return (

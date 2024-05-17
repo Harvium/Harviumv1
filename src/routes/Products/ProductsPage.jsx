@@ -1,6 +1,6 @@
-import NavBar from '../../custom/NavBar';
-import Footer from '../../custom/Footer';
-import ProductItem from '../../sub-components/ProductItem';
+import NavBar from '/src/components/custom/NavBar';
+import Footer from '/src/components/custom/Footer';
+import ProductItem from '/src/components/sub-components/ProductItem';
 import Reveal from "@/components/animations/reveal/reveal.jsx";
 import Reveal2 from "@/components/animations/reveal/reveal2.jsx";
 import { Link } from 'react-router-dom';

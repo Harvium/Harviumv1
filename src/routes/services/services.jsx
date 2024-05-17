@@ -1,5 +1,5 @@
 import NavBar from 'src/components/custom/NavBar.jsx'
-import Footer from 'src/components/custom/Footer.jsx'
+import Footer from '@/layouts/Footer.jsx'
 import ServicesDescription2 from "descriptions/ServicesDescription2.jsx";
 import ServicesDescription from "descriptions/ServicesDescription.jsx";
 

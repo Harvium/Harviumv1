@@ -2,7 +2,7 @@ import ContactPage from '/src/routes/ContactPage.jsx';
 import HomePage from '/src/routes/HomePage';
 import ProductsList from '/src/routes/ProductsList';
 import About from '/src/routes/About.jsx';
-import Services from '/src/routes/services/Services.jsx';
+import Services from '/src/routes/services/services.jsx';
 import TermsOfUse from '/src/routes/TermsOfUse';
 import ProductPage from '/src/routes/Products/ProductsPage';
 import ProductDetailPage from '/src/routes/Products/ProductDetailPage';
@@ -10,9 +10,8 @@ import PrecisionFarming from '/src/routes/PrecisionFarming';
 import ScrollToTop from '/src/components/animations/ScrollToTop';
 import FAQ from '/src/routes/FAQ';
 import Cookies from '/src/routes/Cookies';
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 function App() {
 

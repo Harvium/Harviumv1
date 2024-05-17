@@ -1,6 +1,8 @@
+// Contact page
+
 import React from 'react'
 import NavBar from 'src/components/custom/NavBar'
-import ContactUs from './Contact/ContactUs'
+import ContactUs from './_components/ContactUs'
 import ContactFooter from './Contact/ContactFooter'
 import Footer from '../custom/Footer'
 
