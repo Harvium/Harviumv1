@@ -2,7 +2,7 @@ import ContactPage from "@/routes/Contact/page";
 import HomePage from "@/routes/HomePage";
 import Trade from '@/routes/Products/page';
 import About from '@/routes/About/page';
-import Services from '@/routes/Services/page';
+import Services from '@/routes/services/page';
 import TermsOfUse from '@/routes/TermsOfUse/page';
 import ProductPage from '@/routes/Products/page';
  // This is legacy import import ProductDetailPage from './routes/Products/ProductDetailPage';
