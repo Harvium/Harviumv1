@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomFormBasic from '../../custom-ui/CustomFormBasic.jsx';
+import CustomFormBasic from "/src/components/custom/Forms/CustomFormBasic";
 
 
 

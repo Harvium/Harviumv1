@@ -1,10 +1,10 @@
-import Reveal from "@/components/animations/reveal/reveal.jsx";
-import ServiceCard from "@/components/Routes/services/servicesDescription/serviceCard/serviceCard.jsx";
-import serviceCardPhoto from "@/assets/services/serviceDescriptionImage.png"
-import dedicated from "@/assets/services/dedicated.jpg"
-import control from "@/assets/services/control.jpg"
-import news from "@/assets/services/news.jpg"
-import useSphere from "@/components/Routes/services/servicesDescription/useSphere.js";
+import Reveal from "/src/components/animations/reveal/reveal.jsx";
+import ServiceCard from "./serviceCard/serviceCard.jsx";
+import serviceCardPhoto from "/src/assets/services/serviceDescriptionImage.png"
+import dedicated from "/src/assets/services/dedicated.jpg"
+import control from "/src/assets/services/control.jpg"
+import news from "/src/assets/services/news.jpg"
+import useSphere from "./useSphere.js";
 
 
 const ServicesDescription = () => {

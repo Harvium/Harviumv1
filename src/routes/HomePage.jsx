@@ -1,10 +1,10 @@
-import NavBar from "src/components/custom/NavBar";
+import NavBar from "/src/layouts/NavBar";
 import Presentation from "./Home/Content/Presentation";
-import PriceTable from "src/components/custom/PriceTable";
-import Footer from "@/layouts/Footer";
+import PriceTable from "/src/components/custom/pricelists/PriceTable";
+import Footer from "/src/layouts/Footer";
 import Cont0 from "./Home/Content/Cont0";
 import Cont2 from "./Home/Content/Cont2";
-import Oferta from "./Other/Notused/Offer";
+// Not used import - import Oferta from "./Other/Notused/Offer";
 import ContactUs from "./Contact/_components/ContactUs";
 
 function App() {

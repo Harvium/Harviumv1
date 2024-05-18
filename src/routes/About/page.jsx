@@ -1,10 +1,10 @@
 // About us page
 
 import React from 'react'
-import NavBar from '../custom/NavBar'
-import Footer from '../custom/Footer'
-import ServiceMap from "@/components/Routes/About us/serviceMap/serviceMap.jsx";
-import Aboutus from "@/components/Routes/About us/Aboutus.jsx";
+import NavBar from "/src/layouts/NavBar"
+import Footer from "/src/layouts/Footer"
+import ServiceMap from "./_components/serviceMap";
+import Aboutus from "./_components/Aboutus";
 
 
 export default function About() {

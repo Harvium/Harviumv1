@@ -1,5 +1,5 @@
-import NavBar from '/src/components/custom/NavBar';
-import Footer from '/src/components/custom/Footer';
+import NavBar from '/src/layouts/NavBar';
+import Footer from "/src/layouts/Footer";
 import ProductItem from '/src/components/sub-components/ProductItem';
 import Reveal from "@/components/animations/reveal/reveal.jsx";
 import Reveal2 from "@/components/animations/reveal/reveal2.jsx";
