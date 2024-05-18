@@ -1,3 +1,5 @@
+// Services main page
+
 import NavBar from "/src/layouts/NavBar";
 import Footer from "/src/layouts/Footer";
 import ServicesDescription2 from "./servicesDescription/ServicesDescription2";
