@@ -4,7 +4,7 @@ import ProductItem from '/src/components/sub-components/ProductItem';
 import Reveal from "@/components/animations/reveal/reveal.jsx";
 import Reveal2 from "@/components/animations/reveal/reveal2.jsx";
 import { Link } from 'react-router-dom';
-import { products, productUsers } from './ProductData.js';
+import { products, productUsers } from './_components/ProductData.js/index.js';
 
 
 const ProductPage = () => {
