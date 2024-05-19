@@ -52,10 +52,10 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
             <p className="max-w-xl text-2xl text-purple-800 font-bold">
-            Nie widzisz określonego produktu?
+              Nie widzisz określonego produktu?
             </p>
             <p className="mt-2 text-xl not-italic text-white">
-            Poszukujesz najlepszej ceny na rynku? Potrzebujesz indywidualnej obsługi?
+              Poszukujesz najlepszej ceny na rynku? Potrzebujesz indywidualnej obsługi?
             </p>
 
             <div className="mt-8">
@@ -68,7 +68,7 @@ const ContactForm = () => {
 
           <div className="rounded-lg bg-blue p-8 shadow-lg lg:col-span-3 lg:p-12">
             <form action={FORM_ENDPOINT} method="POST" onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label className="sr-only" htmlFor="Name_first">Name_first</label>
                   <input
@@ -101,7 +101,7 @@ const ContactForm = () => {
                   id="Company_Name"
                 />
               </div>
-              
+
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
@@ -126,7 +126,7 @@ const ContactForm = () => {
                   />
                 </div>
               </div>
-{/*}
+              {/*}
               <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
                 <div>
                   <label
