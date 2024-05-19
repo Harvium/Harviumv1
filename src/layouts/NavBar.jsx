@@ -131,64 +131,64 @@ export default function NavBar() {
                       </span>
                     </summary>
 
-                    <ul className="absolute right-0 mt-2 space-y-1 px-4 bg-white shadow-lg rounded-lg">
-                      <li>
+                    <ul className="absolute right-1 mt-2 px-4 bg-[#080E2D] shadow-lg rounded-lg">
+                      <li className="border-b border-gray-400">
                         <Link
                           to="/Trade"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-yellow-400"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-[#0c1544] hover:text-yellow-500"
                         >
                           Handluj
                         </Link>
                       </li>
 
-                      <li>
+                      <li className="border-b border-gray-400">
                         <Link
                           to="/Services"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-xs font-medium text-white hover:bg-[#0c1544] hover:text-gray-300"
                         >
                           Usługi
                         </Link>
                       </li>
 
-                      <li>
+                      <li className="border-b border-gray-400">
                         <Link
                           to="/Products"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-xs font-medium text-white hover:bg-[#0c1544] hover:text-gray-300"
                         >
                           Produkty
                         </Link>
                       </li>
 
-                      <li>
+                      <li className="border-b border-gray-400">
                         <Link
                           to="/About"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-xs font-medium text-white hover:bg-[#0c1544] hover:text-gray-300"
                         >
                           O nas
                         </Link>
                       </li>
 
-                      <li>
+                      <li className="border-b border-gray-400">
                         <Link
                           to="/Contact"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-xs font-medium text-white hover:bg-[#0c1544] hover:text-gray-300"
                         >
                           Kontakt
                         </Link>
                       </li>
 
-                      <li>
+                      <li className="border-b border-gray-400">
                         <Link to="http://blog.harvium.pl/"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-xs font-medium text-white hover:bg-[#0c1544] hover:text-gray-300"
                         >
                           Wiadomości
                         </Link>
                       </li>
 
-                      <li>
+                      <li >
                         <Link
                           to="/PrecisionFarming"
-                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-xs font-medium text-white hover:bg-[#0c1544] hover:text-gray-300"
                         >
                           Rolnictwo precyzyjne
                         </Link>
