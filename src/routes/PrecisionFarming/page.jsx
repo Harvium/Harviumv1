@@ -1,4 +1,5 @@
 import NavBar from "/src/layouts/NavBar";
+import { Helmet } from "react-helmet"
 import Footer from "/src/layouts/Footer";
 import Cont3 from "/src/routes/PrecisionFarming/_components/Cont3.jsx";
 import Cont4 from "/src/routes/PrecisionFarming/_components/Cont4.jsx";
@@ -14,6 +15,11 @@ function PrecisionFarming() {
   return (
     <>
       <div>
+      <Helmet>
+        <title>PrecisionFarming</title>
+        <meta name="description" content="Zapewniamy przyjazny dla każdego dostęp do danych z satelitów Sentinel 2 i innych, które są nieocenionnym narzędziem w rękach rolników, handlowców produktów rolnych oraz innych uczestników agrobiznesu." />
+        <link rel='canonical' href='/PrecisionFarming'></link>
+      </Helmet>
         <NavBar />
         <Cont3 />
         <Cont4 />

@@ -1,4 +1,5 @@
 import NavBar from "/src/layouts/NavBar";
+import { Helmet } from "react-helmet"
 import Presentation from "./Home/Content/Presentation";
 import PriceTable from "/src/components/custom/pricelists/PriceTable";
 import Footer from "/src/layouts/Footer";
@@ -11,6 +12,11 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <title>Harvium</title>
+        <meta name="description" content="Harvium jest nowoczesną platformą do kompleksowej obsługi zleceń na całym świecie. Z nami łatwiej znajdziesz rynek zbytu oraz kupisz towar po konkurencyjnej cenie." />
+        <link rel='canonical' href='/'></link>
+      </Helmet>
       <div>
         <NavBar />
         <Cont0 />
