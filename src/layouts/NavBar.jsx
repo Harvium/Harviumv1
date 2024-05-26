@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import ButtonTrade from '../components/custom/Buttons/ButtonTrade';
+import Modal from '../components/custom/Login/Modal.jsx';
+import ModalRegister from '../components/custom/Login/ModalRegister.jsx';
 // import { Button } from '../ui/button'
 
 export default function NavBar() {
@@ -92,20 +94,12 @@ export default function NavBar() {
 
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
-          <Link
-            className="rounded-md bg-white px-5 py-2.5 text-sm font-medium text-navyblue shadow dark:hover:bg-teal-500"
-            to="/#"
-          >
-            Logowanie
-          </Link>
+          <Modal>
+          </Modal>
 
           <div className="hidden sm:flex">
-            <Link
-              className="rounded-md bg-#080E2D-100 px-5 py-2.5 text-sm font-medium text-white dark:bg-#080E2D-800 dark:text-white dark:hover:text-white/75"
-              to="/#"
-            >
-              Rejestracja
-            </Link>
+            <ModalRegister>
+            </ModalRegister>
           </div>
         </div>
 
