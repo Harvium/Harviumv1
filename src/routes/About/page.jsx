@@ -10,6 +10,7 @@ import ScrollingBar from "/src/layouts/ScrollingBar"
 import MarketShare from './_components/MarketShare';
 import WhatWeDo from './_components/WhatWeDo';
 import Timeline from './_components/Timeline';
+import { Team } from './_components/Team';
 
 export default function About() {
   return (
@@ -22,6 +23,7 @@ export default function About() {
     <NavBar />
     <WhatWeDo />
     <Aboutus />
+
     <MarketShare />
     <Timeline />
     <ServiceMap />
