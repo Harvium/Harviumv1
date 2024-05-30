@@ -33,21 +33,6 @@ export default function PriceTable() {
   }, []);
 
 
-  /*
-  useEffect(() => {
-    fetch('../Data/test_data.json')
-      .then(response => response.json())
-      .then(data => {
-        setData(data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-        setIsLoading(false);
-      })
-  }, []);
-  */
-
   const sortedData = React.useMemo(() => {
     let sortableData = [...data];
     if (sortConfig !== null) {
@@ -64,12 +49,29 @@ export default function PriceTable() {
     return sortableData;
   }, [data, sortConfig]);
 
+ // Filtering before pagination
+ const filteredData = sortedData.filter((row) => row.ProductName.toLowerCase().includes(searchTerm.toLowerCase()) && (category === 'all' || row.Category === category));
+
+// Then, sort the filtered data
+if (sortConfig !== null) {
+  filteredData.sort((a, b) => {
+    if (a[sortConfig.key] < b[sortConfig.key]) {
+      return sortConfig.direction === 'ascending' ? -1 : 1;
+    }
+    if (a[sortConfig.key] > b[sortConfig.key]) {
+      return sortConfig.direction === 'ascending' ? 1 : -1;
+    }
+    return 0;
+  });
+}
+
+
   // Pagination logic
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = sortedData.slice(indexOfFirstItem, indexOfLastItem);
 
-  const totalPages = Math.ceil(sortedData.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
   const handleNextPage = () => {
     setCurrentPage(Math.min(currentPage + 1, totalPages));
