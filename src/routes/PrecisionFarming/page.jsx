@@ -9,6 +9,7 @@ import Cont6 from "/src/routes/PrecisionFarming/_components/Cont6.jsx";
 import Map from "/src/routes/PrecisionFarming/_components/Map.jsx";
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import ScrollingBar from "/src/layouts/ScrollingBar"
 
 function PrecisionFarming() {
 
@@ -27,6 +28,7 @@ function PrecisionFarming() {
         <Cont5b />
         <Cont6 /> 
         <Footer />
+        <ScrollingBar />
       </div>
     </>
   )

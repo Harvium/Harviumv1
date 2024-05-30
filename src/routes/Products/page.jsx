@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import Footer from "/src/layouts/Footer";
 import ContactUs from "/src/routes/Contact/_components/ContactUs";
 import PriceTable from "/src/components/custom/pricelists/PriceTable.jsx";
+import ScrollingBar from "/src/layouts/ScrollingBar"
 
 
 
@@ -20,6 +21,7 @@ function ProductsList() {
         <PriceTable />
         <ContactUs />
         <Footer />
+        <ScrollingBar />
       </div>
     </>
   )

@@ -7,6 +7,7 @@ export default function ContactUs() {
       <>
         <NavBar />
         <Oferta />
+        <ScrollingBar />
       </>
   )
 }

@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 export default function ContactFooter() {
     return (
-    <section className="bg-background-primary">
+    <section className="bg-[#020621]">
     <div className="container px-6 py-12 mx-auto">
         <div className="text-center">
         
-        <Link to="/FAQ" className="font-medium text-yellow-500">Najczęściej zadawane pytania - kliknij tutaj.</Link>
+        <Link to="/FAQ" className="font-medium text-purple-500">Najczęściej zadawane pytania - kliknij tutaj.</Link>
             <h1 className="mt-2 text-2xl font-semibold text-white">Skontaktuj się z nami</h1>
 
             <p className="mt-3 text-white">Zespół naszych ekspertów jest zawsze w gotowości, aby odpowiedzieć na Twoje pytania.</p>
@@ -24,7 +24,7 @@ export default function ContactFooter() {
 
                 <h2 className="mt-4 text-lg font-medium text-white">Email</h2>
                 <p className="mt-2 text-white">Odpowiemy tak szybko jak to możliwe.</p>
-                <p className="mt-2 text-blue-500 dark:text-blue-400">contact@harvium.com</p>
+                <p className="mt-2 text-purple-500 dark:text-blue-400">contact@harvium.com</p>
             </div>
 
             <div className="flex flex-col items-center justify-center text-center self-start">
@@ -37,7 +37,7 @@ export default function ContactFooter() {
                 
                 <h2 className="mt-4 text-lg font-medium text-white">Spotkanie</h2>
                 <p className="mt-2 text-white">Umów się z nami na spotkanie w dowolnej lokalizacji.</p>
-                <p className="mt-2 text-blue-500 dark:text-blue-400">Jesteśmy do Twojej dyspozycji każdego dnia w Warszawie, Poznaniu, Kołobrzegu, Trójmieście i Kwidzynie</p>
+                <p className="mt-2 text-purple-500 dark:text-blue-400">Jesteśmy do Twojej dyspozycji każdego dnia w Warszawie, Poznaniu, Kołobrzegu, Trójmieście i Kwidzynie</p>
             </div>
 
             <div className="flex flex-col items-center justify-center text-center self-start">
@@ -49,7 +49,7 @@ export default function ContactFooter() {
                 
                 <h2 className="mt-4 text-lg font-medium text-white">Telefon</h2>
                 <p className="mt-2 text-white">Dzwoń w dogodnym dla Ciebie czasie. Jeśli nie uda się nawiązać połączenia to oddzwonimy.</p>
-                <p className="mt-2 text-blue-500 dark:text-blue-400">+48 784-852-271</p>
+                <p className="mt-2 text-purple-500 dark:text-blue-400">+48 784-852-271</p>
             </div>
         </div>
     </div>

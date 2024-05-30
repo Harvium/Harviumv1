@@ -6,7 +6,11 @@ import Footer from "/src/layouts/Footer"
 import ServiceMap from "./_components/serviceMap";
 import { Helmet } from "react-helmet"
 import Aboutus from "./_components/Aboutus";
-
+import ScrollingBar from "/src/layouts/ScrollingBar"
+import MarketShare from './_components/MarketShare';
+import WhatWeDo from './_components/WhatWeDo';
+import Timeline from './_components/Timeline';
+import { Team } from './_components/Team';
 
 export default function About() {
   return (
@@ -17,9 +21,14 @@ export default function About() {
         <link rel='canonical' href='/About'></link>
     </Helmet>
     <NavBar />
+    <WhatWeDo />
     <Aboutus />
+
+    <MarketShare />
+    <Timeline />
     <ServiceMap />
     <Footer />
+    <ScrollingBar />
     </>
   )
 }
