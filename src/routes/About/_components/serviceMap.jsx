@@ -2,7 +2,7 @@ import Reveal from "@/components/animations/reveal/reveal.jsx";
 
 const ServiceMap = () => {
     return (
-        <section className='w-full bg-background-primary flex max-lg:flex-col max-lg:items-center justify-end gap-16'>
+        <section className='w-full bg-background-primary flex max-lg:flex-col max-lg:items-center justify-end gap-16 pt-10'>
             <div className='text-left lg:max-w-[576px] space-y-5 mx-5 text-lg text-white font-normal'>
                 <Reveal>
                     <h2 className='text-2xl py-5 font-bold max-lg:text-center'>Masz pytania? Spotkajmy się!</h2>

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import NavBar from '/src/layouts/NavBar.jsx'
 import FAQ1 from './_components/FAQ'
 import Footer from '/src/layouts/Footer.jsx'
+import ScrollingBar from "/src/layouts/ScrollingBar"
 
 export default function ContactPage() {
   return (
@@ -15,6 +16,7 @@ export default function ContactPage() {
       <NavBar />
       <FAQ1 />
       <Footer />
+      <ScrollingBar />
     </>
   )
 }

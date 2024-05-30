@@ -5,6 +5,7 @@ import NavBar from "/src/layouts/NavBar"
 import ContactUs from "./_components/ContactUs"
 import ContactFooter from "./_components/ContactFooter"
 import Footer from "/src/layouts/Footer"
+import ScrollingBar from "/src/layouts/ScrollingBar"
 
 export default function ContactPage() {
   return (
@@ -18,6 +19,7 @@ export default function ContactPage() {
       <ContactUs />
       <ContactFooter />
       <Footer />
+      <ScrollingBar />
     </>
   )
 }
