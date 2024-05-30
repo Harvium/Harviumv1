@@ -13,7 +13,7 @@ const WhoWeAre = () => {
     return (
         <section className="bg-background-primary">
             <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-                <Link to="http://news.harvium.pl/" className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-9 text-sm text-gray-700 bg-gray-300 rounded-full hover:bg-gray-400" role="alert">
+                <Link to="http://news.harvium.pl/" className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-12 text-sm text-white bg-gray-700 rounded-full hover:bg-gray-500" role="alert">
                     <span className="text-xs bg-yellow-500 rounded-full text-black px-4 py-1.5 mr-3">Nowość</span>
                     <span className="text-sm font-medium">Niezależne źródło informacji już jest! Najnowsze wiadomości</span>
                     <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

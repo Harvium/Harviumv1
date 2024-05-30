@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function ContactFooter() {
     return (
-    <section className="bg-background-primary">
+    <section className="bg-[#020621]">
     <div className="container px-6 py-12 mx-auto">
         <div className="text-center">
         
