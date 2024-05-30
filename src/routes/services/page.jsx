@@ -5,6 +5,7 @@ import Footer from "/src/layouts/Footer";
 import { Helmet } from "react-helmet"
 import ServicesDescription2 from "./servicesDescription/ServicesDescription2";
 import ServicesDescription from "./servicesDescription/ServicesDescription";
+import ScrollingBar from "/src/layouts/ScrollingBar"
 
 const Services = () => {
   return (
@@ -21,6 +22,7 @@ const Services = () => {
            
         </div>
       <Footer />
+      <ScrollingBar />
     </>
   )
 }

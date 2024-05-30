@@ -6,12 +6,12 @@ export default function Aboutus() {
 	<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl pb-28">
 		<div>
 			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-3xl text-white">Kim jesteśmy?</h2>
-			<p className="max-w-4xl mx-auto mt-4 text-xl text-center text-white">Jesteśmy firmą handlową, która powstała z ideą pomocy. Zastanawialiśmy się jak wesprzec swoich klientów w sprzedaży ich produktów. Tak powstała odpowiedź w postaci Harvium - firmy, która specjalizuje się w kompleksowej obsłudze i realizacji transakcji z branży rolniczej, spożywczej oraz surowcowej. Mamy wszystko czego twój biznes potrzebuje do zawierania bezpiecznych i zyskownych transakcji. </p>
+			<p className="max-w-4xl mx-auto mt-4 text-xl text-center text-white">Harvium - spółka, która specjalizuje się w kompleksowej obsłudze i realizacji transakcji z branży rolniczej, spożywczej oraz surowcowej. Mamy wszystko czego Twój biznes potrzebuje do zawierania bezpiecznych i zyskownych transakcji. </p>
 		</div>
 		<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 			<div>
 				<h3 className="text-2xl font-bold tracking-tight sm:text-3xl text-white">Czym się zajmujemy?</h3>
-				<p className="mt-3 text-lg text-white">Naszą misją jest tworzenie miejsca w którym popyt spotyka podaż na równych warunkach. Dostarczamy bieżące informacje, edukujemy i wprowadzamy innowacyjne rozwiązania. Obecnie zajmujemy się także obsługą transakcji dla naszych klientów i budujemy sieć zweryfikowanych dostawców oraz nabywców, dla stworzenia bezpiecznego i płynnego rynku.</p>
+				<p className="mt-3 text-lg text-white">Obecnie zajmujemy się obsługą transakcji dla naszych klientów i budujemy sieć zweryfikowanych dostawców oraz nabywców, dla stworzenia bezpiecznego i płynnego rynku.</p>
 				<div className="mt-12 space-y-12">
 					<div className="flex">
 						<div className="flex-shrink-0">
@@ -58,7 +58,8 @@ export default function Aboutus() {
                 <img
           alt=""
           src={kimjestesmyImg}
-          className="mx-auto rounded-lg shadow-lg bg-white0"
+          className="mx-auto rounded-lg shadow-lg"
+		  style={{ width: '60%', height: 'auto' }}
         />
             </div>
 		</div>

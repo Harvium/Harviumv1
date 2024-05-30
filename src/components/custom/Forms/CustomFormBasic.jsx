@@ -51,8 +51,8 @@ const ContactForm = () => {
     <section className="bg-background-primary">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-          <div className="lg:col-span-2 lg:py-12">
-            <p className="max-w-xl text-2xl text-purple-800 font-bold">
+          <div className="lg:col-span-2 lg:py-12 lg:border-r lg:border-gray-200">
+            <p className="max-w-xl text-2xl text-white font-bold">
               Nie widzisz określonego produktu, który Cię interesuje?
             </p>
             <p className="mt-2 text-lg not-italic text-white">
@@ -60,7 +60,7 @@ const ContactForm = () => {
             </p>
 
             <div className="mt-8">
-              <p className="text-2xl font-bold text-purple-800">Jesteśmy dla Ciebie.</p>
+              <p className="text-2xl font-bold text-white">Jesteśmy dla Ciebie.</p>
 
               <p className="mt-2 text-lg not-italic text-white">Skorzystaj z formularza, a my zatroszczymy się o profesjonalną obsługę Twojego zgłoszenia.</p>
             </div>
