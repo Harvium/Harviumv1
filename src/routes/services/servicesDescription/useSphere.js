@@ -60,8 +60,8 @@ const useSphere = () => {
 
         //Sizes
         const sizes = {
-            width: 400,
-            height: 400,
+            width: 360,
+            height: 360,
         }
         window.addEventListener('resize', () => {
 
