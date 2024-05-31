@@ -21,7 +21,7 @@ const WhoWeAre = () => {
                     </svg>
                 </Link>
                 <h1 className="mb-4 text-4xl text-white font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Inwestujemy w uczciwy rynek</h1>
-                <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Naszą misją jest tworzenie miejsca w którym popyt spotyka podaż na równych warunkach. Dostarczamy bieżące informacje, edukujemy i wprowadzamy innowacyjne rozwiązania.</p>
+                <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Naszą misją jest tworzenie miejsca, w którym popyt spotyka podaż na równych warunkach. Dostarczamy bieżące informacje, edukujemy i wprowadzamy innowacyjne rozwiązania.</p>
                 <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
     <Link to="#" className="inline-flex justify-center items-center py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-gray-500" onClick={scrollToNextSection}>
         Dowiedz się więcej
