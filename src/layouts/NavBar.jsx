@@ -175,7 +175,7 @@ export default function NavBar() {
                       </li>
 
                       <li className="border-b border-gray-400">
-                        <Link to="http://blog.harvium.pl/"
+                        <Link to="http://news.harvium.pl/"
                           className="block rounded-lg px-4 py-2 text-xs font-medium text-white hover:bg-[#0c1544] hover:text-gray-300"
                         >
                           Wiadomości

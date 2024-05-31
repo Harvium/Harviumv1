@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const OurServices = () => {
 
     return (
-        <div className='bg-background-primary font-roboto'>
+        <div className='bg-background-primary'>
             <div className='flex flex-col justify-center items-center gap-32 px-5 py-24'>
                 <h1 className='text-[40px]'>Nasze Usługi</h1>
                 <div className='flex flex-wrap justify-center mb-32 gap-28'>

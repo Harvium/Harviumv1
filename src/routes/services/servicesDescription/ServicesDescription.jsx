@@ -61,7 +61,7 @@ const ServicesDescription = () => {
                             </ul>
                         </Reveal>
                     </div>
-                    <canvas ref={sphereRef} className='outline-none m-2' />
+                    <canvas ref={sphereRef} className='outline-none m-2 width-100%' />
                 </section>
 
 
