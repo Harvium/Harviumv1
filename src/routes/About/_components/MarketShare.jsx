@@ -3,6 +3,7 @@ import React from 'react';
 function MarketShare() {
   return (
     <section className="bg-[#020621]">
+      <div className="w-5/6 mx-auto border-t border-gray-300"></div>
       <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6 text-white">
       <h1 className="text-4xl font-bold mb-12">Naszym celem jest połączyć:</h1>
         <dl className="grid max-w-screen-md gap-8 mx-auto text-white sm:grid-cols-3">
@@ -20,6 +21,7 @@ function MarketShare() {
           </div>
         </dl>
       </div>
+      <div className="w-5/6 mx-auto border-t border-gray-300"></div>
     </section>
   );
 }
