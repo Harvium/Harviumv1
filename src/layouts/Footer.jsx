@@ -25,6 +25,7 @@ export default function Footer() {
             rel="noreferrer"
             target="_blank"
             className="text-white-700 transition hover:opacity-75 dark:text-white-200"
+            alt="Facebook"
           >
             <span className="sr-only">Facebook</span>
 
@@ -44,6 +45,7 @@ export default function Footer() {
             rel="noreferrer"
             target="_blank"
             className="text-white-700 transition hover:opacity-75 dark:text-white-200"
+            alt="Instagram"
           >
             <span className="sr-only">Instagram</span>
 
@@ -63,6 +65,7 @@ export default function Footer() {
             rel="noreferrer"
             target="_blank"
             className="text-white-700 transition hover:opacity-75 dark:text-white-200"
+            alt="Twitter"
           >
             <span className="sr-only">Twitter</span>
 
@@ -80,6 +83,7 @@ export default function Footer() {
             rel="noreferrer"
             target="_blank"
             className="text-white-700 transition hover:opacity-75 dark:text-white-200"
+            alt="Youtube"
           >
             <span className="sr-only">Youtube</span>
 
