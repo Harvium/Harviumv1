@@ -100,7 +100,7 @@ export default function PriceTable() {
           Odkryj z nami świat możliwości handlowych.
         </p>
 
-        <p className='text-sm mt-2 non-italic'>
+        <p className='text-sm mt-2 non-italic text-gray-300'>
           Na chwilę obecną prowadzimy tylko indywidualną obsługę. Skontaktuj się z nami.
         </p>
 

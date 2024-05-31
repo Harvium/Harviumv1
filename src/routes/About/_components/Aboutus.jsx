@@ -6,19 +6,19 @@ export default function Aboutus() {
 			<div className="container max-w-xl p-6 py-12 mx-auto space-y-16 lg:px-8 lg:max-w-7xl pb-28">
 				<span class="flex items-center">
 					<span class="h-px flex-1 bg-white"></span>
-					<span class="text-3xl font-bold shrink-0 px-6">Kim jesteśmy?</span>
+					<span class="text-2xl font-bold shrink-0 px-6 text-white">Kim jesteśmy?</span>
 					<span class="h-px flex-1 bg-white"></span>
 				</span>
 				<div>
-					<p className="max-w-4xl mx-auto mt-4 text-xl text-center text-white">Spółką, która specjalizuje się w kompleksowej obsłudze i realizacji transakcji z branży rolniczej, spożywczej oraz surowcowej. Mamy wszystko czego Twój biznes potrzebuje do zawierania bezpiecznych i zyskownych transakcji. </p>
+					<p className="max-w-4xl mx-auto mt-4 text-xl text-center text-gray-300">Spółką, która specjalizuje się w kompleksowej obsłudze i realizacji transakcji z branży rolniczej, spożywczej oraz surowcowej. Mamy wszystko czego Twój biznes potrzebuje do zawierania bezpiecznych i zyskownych transakcji. </p>
 				</div>
 				<span class="flex items-center">
 					<span class="h-px flex-1 bg-white"></span>
-					<span class="text-3xl font-bold shrink-0 px-6">Czym się zajmujemy?</span>
+					<span class="text-2xl font-bold shrink-0 px-6">Czym się zajmujemy?</span>
 					<span class="h-px flex-1 bg-white"></span>
 				</span>
 				<div>
-					<p className="max-w-4xl mx-auto mt-4 text-xl text-center text-white">Obecnie zajmujemy się obsługą transakcji dla naszych klientów i budujemy sieć zweryfikowanych dostawców oraz nabywców, dla stworzenia bezpiecznego i płynnego rynku. </p>
+					<p className="max-w-4xl mx-auto mt-4 text-xl text-center text-gray-300">Obecnie zajmujemy się obsługą transakcji dla naszych klientów i budujemy sieć zweryfikowanych dostawców oraz nabywców, dla stworzenia bezpiecznego i płynnego rynku. </p>
 				</div>
 
 				<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
@@ -35,7 +35,7 @@ export default function Aboutus() {
 								</div>
 								<div className="ml-4">
 									<h4 className="text-lg font-medium leading-6 text-white">Najlepsze ceny!</h4>
-									<p className="mt-2 text-white">Dostarczamy notowania, które pozwolą Ci na zawieranie transakcji po najlepszych cenach na rynku.</p>
+									<p className="mt-2 text-gray-300">Dostarczamy notowania, które pozwolą Ci na zawieranie transakcji po najlepszych cenach na rynku.</p>
 								</div>
 							</div>
 							<div className="flex">
@@ -48,7 +48,7 @@ export default function Aboutus() {
 								</div>
 								<div className="ml-4">
 									<h4 className="text-lg font-medium leading-6 text-white">Niezawodne źródło informacji!</h4>
-									<p className="mt-2 text-white">Ciągle rozwijana zakładka wiadomości dostarcza nie tylko informacje o bieżących wydarzeniach na rynku, ale zapewnia także niezawodne kompedium wiedzy na tematy rynków rolniczych i finansowych oraz handlu.</p>
+									<p className="mt-2 text-gray-300">Ciągle rozwijana zakładka wiadomości dostarcza nie tylko informacje o bieżących wydarzeniach na rynku, ale zapewnia także niezawodne kompedium wiedzy na tematy rynków rolniczych i finansowych oraz handlu.</p>
 								</div>
 							</div>
 							<div className="flex">
@@ -61,7 +61,7 @@ export default function Aboutus() {
 								</div>
 								<div className="ml-4">
 									<h4 className="text-lg font-medium leading-6 text-white">Rolnictwo precyzyjne!</h4>
-									<p className="mt-2 text-white">Dostarczamy technologię, która sprawi, że Twoje rolnictwo wskoczy na wyższy poziom. Sprawdź nasze mapy lub skontaktuj się z nami, aby zamówić specjalny raport dotyczący interesującego Cię obszaru. Dzięki nam dowiesz się nie tylko na temat swojej uprawy, ale także Twojego kontrahenta.</p>
+									<p className="mt-2 text-gray-300">Dostarczamy technologię, która sprawi, że Twoje rolnictwo wskoczy na wyższy poziom. Sprawdź nasze mapy lub skontaktuj się z nami, aby zamówić specjalny raport dotyczący interesującego Cię obszaru. Dzięki nam dowiesz się nie tylko na temat swojej uprawy, ale także Twojego kontrahenta.</p>
 								</div>
 							</div>
 						</div>

@@ -37,7 +37,7 @@ const Cont0 = () => {
                   <ButtonTrade>Handluj</ButtonTrade>
                 </Link>
               </div>
-              <h3 className="hidden md:block">Dowiedz się więcej</h3>
+              <h3 className="hidden md:block text-gray-300">Dowiedz się więcej</h3>
               <div className="mt-10 animate-bounce">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 cursor-pointer mx-auto" onClick={scrollToNextSection}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
