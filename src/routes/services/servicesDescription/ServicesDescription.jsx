@@ -23,23 +23,23 @@ const ServicesDescription = () => {
                 <section className='flex flex-wrap justify-center gap-48 pt-16'>
                     <ServiceCard
                         serviceHeader={'Rolniku! Skorzystaj z naszej dedykowanej obsługi'}
-                        serviceDescription={'Zapewniamy kompleksową obsługę procesu sprzedaży oraz kupna towarów przez rolników i przedsiębiorstwa. Pobieramy minimalną marżę, co sprawia, że nasze towary są w najlepszych cenach.'}
+                        serviceDescription={<span className='text-gray-200'>Zapewniamy kompleksową obsługę procesu sprzedaży oraz kupna towarów przez rolników i przedsiębiorstwa. Pobieramy minimalną marżę, co sprawia, że nasze towary są w najlepszych cenach.</span>}
                         servicePhoto={dedicated}
                     />
                     <ServiceCard
                         serviceHeader={'Jakość naszych produktów jest kontrolowana'}
-                        serviceDescription={'Uszczelniamy nasze kanały transportowe, aby produkty, które dostarczamy spełniały najwyższe standardy jakości. Nie pozwalamy na zalewanie rynku produktami gorszej jakości.'}
+                        serviceDescription={<span className='text-gray-200'>Uszczelniamy nasze kanały transportowe, aby produkty, które dostarczamy spełniały najwyższe standardy jakości. Nie pozwalamy na zalewanie rynku produktami gorszej jakości.</span>}
                         servicePhoto={control}
                     />
                     <ServiceCard
                         serviceHeader={'Źródło bieżących informacji'}
-                        serviceDescription={'Dostarczamy informacje o rynku rolniczym i gospodarce. Czytaj nasze newsy, komentuj w social mediach i stań się częścią naszej społeczności.'}
+                        serviceDescription={<span className='text-gray-200'>Dostarczamy informacje o rynku rolniczym i gospodarce. Czytaj nasze newsy, komentuj w social mediach i stań się częścią naszej społeczności.</span>}
                         servicePhoto={news}
-                        
+
                     />
-                      <ServiceCard
+                    <ServiceCard
                         serviceHeader={'Skorzystaj z możliwości rolnictwa precyzyjnego'}
-                        serviceDescription={'Wykorzystaj rolnictwo precyzyjne do przewidywania trendów i poprawy efektywności upraw.'}
+                        serviceDescription={<span className='text-gray-200'>Wykorzystaj rolnictwo precyzyjne do przewidywania trendów i poprawy efektywności upraw.</span>}
                         servicePhoto={serviceCardPhoto}
                     />
                 </section>
@@ -49,28 +49,22 @@ const ServicesDescription = () => {
                             <h2 className='text-4xl font-bold'>Precyzyjne narzędzia dla rolnictwa</h2>
                         </Reveal>
                         <Reveal>
-                            <p>
-                            Zapewniamy przyjazny dla każdego dostęp do danych z satelitów Sentinel 2 i innych. Nasze usługi są skierowane przede wszystkim do:
-                            </p>
+                            <span>
+                                Zapewniamy dla każdego przyjazny dostęp do danych z satelitów Sentinel 2 i innych. Nasze usługi są skierowane przede wszystkim do:
+                            </span>
                         </Reveal>
                         <Reveal>
-                            <p>
-                            - Rolników: Pomagają monitorować i optymalizować prace w gospodarstwie rolnym.
-                            </p>
-                        </Reveal>
-                        <Reveal>
-                            <p>
-                            - Handlowców produktów rolnych: Dostarczają informacji pomocnych w planowaniu zakupów i sprzedaży.
-                            </p>
-                        </Reveal>
-                        <Reveal>
-                            <p>
-                            - Interesariuszy agrobiznesu: Wspierają w podejmowaniu decyzji na podstawie rzetelnych danych satelitarnych.
-                            </p>
+                            <ul className='list-disc list-inside space-y-6'>
+                                <li className='text-gray-200'>Rolników: Pomagają monitorować i optymalizować prace w gospodarstwie rolnym.</li>
+                                <li className='text-gray-200'>Handlowców produktów rolnych: Dostarczają informacji pomocnych w planowaniu zakupów i sprzedaży.</li>
+                                <li className='text-gray-200'>Interesariuszy agrobiznesu: Wspierają w podejmowaniu decyzji na podstawie rzetelnych danych satelitarnych.</li>
+                            </ul>
                         </Reveal>
                     </div>
-                    <canvas ref={sphereRef} className='outline-none m-2'/>
+                    <canvas ref={sphereRef} className='outline-none m-2' />
                 </section>
+
+
             </div>
         </div>
     );

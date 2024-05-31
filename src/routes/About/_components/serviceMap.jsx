@@ -2,11 +2,11 @@ import Reveal from "@/components/animations/reveal/reveal.jsx";
 
 const ServiceMap = () => {
     return (
-        <section className='w-full bg-background-primary flex max-lg:flex-col max-lg:items-center justify-between gap-16 pt-10 items-center'>
+        <section className='w-full bg-background-primary flex max-lg:flex-col max-lg:items-center justify-between gap-16 pt-5 items-center pb-10'>
             <div className='text-left lg:max-w-[576px] space-y-5 mx-5 text-lg text-white font-normal'>
                 <Reveal>
                     <h2 className='text-3xl py-5 font-bold max-lg:text-center'>Masz pytania? Spotkajmy się!</h2>
-                    <p className='text-md py-5 font-medium max-lg:text-center'>Umów się z nami na spotkanie w Warszawie, Poznaniu, Kołobrzegu, Trójmieście lub Kwidzynie.</p>
+                    <p className='text-md py-3 font-medium max-lg:text-center text-gray-300'>Umów się z nami na spotkanie w Warszawie, Poznaniu, Kołobrzegu, Trójmieście lub Kwidzynie.</p>
                 </Reveal>
             </div>
             {/*Change this to actual localization*/}

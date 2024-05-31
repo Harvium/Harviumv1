@@ -25,8 +25,9 @@ const ScrollingBar = () => {
   const allItems = [...items, ...items, ...items, ...items, ...items];
 
   return (
-    <div className="overflow-hidden2 bg-[rgba(2,6,33,0.85)]">
-      <div className="flex space-x-4 px-2 py-1 animate-marquee">
+    <div className="fixed-bottom">
+      <div className="overflow-hidden2 bg-[rgba(2,6,33,0.85)]">
+        <div className="flex space-x-4 px-2 py-1 animate-marquee">
         {allItems.map((item, index) => (
           <div key={index} className="px-2 rounded-md text-xs font-bold" style={{ color: 'white' }}>
             <span>{item.name}: </span> 
@@ -34,6 +35,7 @@ const ScrollingBar = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
