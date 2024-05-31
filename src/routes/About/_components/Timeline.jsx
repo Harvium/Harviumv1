@@ -27,7 +27,7 @@ function Timeline() {
 					<div className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-violet-800">
 						<h3 className="text-xl font-semibold tracking-wide">Wprowadzimy kontrolę jakości i gwarancję wszystkich produktów</h3>
 						<time className="text-xs tracking-wide uppercase text-gray-400">WRZESIEŃ 2024</time>
-						<p className="mt-3">Nasze produkty będą przechodziły specjalne kontrole, a za ich jakość będziemy odpowiadać Harvium. Kliencie będą mogli cieszyć się niezmienną jakością produktów.</p>
+						<p className="mt-3">Nasze produkty będą przechodziły specjalne kontrole, a za ich jakość będzie odpowiadać Harvium. Klienci będą mogli cieszyć się niezmienną jakością produktów.</p>
 					</div>
 					<div className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-violet-800">
 						<h3 className="text-xl font-semibold tracking-wide">Udostępnimy moduły API</h3>
