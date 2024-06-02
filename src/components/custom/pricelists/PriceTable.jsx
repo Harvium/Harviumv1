@@ -135,10 +135,10 @@ export default function PriceTable() {
           <TableHeader className="bg-[#12084d]/70">
             <TableRow>
               <TableCell colSpan={6}>
-                <div className="grid xl:grid-cols- grid-flow-col gap-3 justify-start items-center w-auto">
-                  <div className=" xl:inline-flex w-1/6 bg-[#12084d] text-white z-20"> {/* Adjust the width here */}
+                <div className="grid xl:grid-cols- grid-flow-col gap-8 justify-start items-center w-auto">
+                  <div className=" xl:inline-flex w-1/6 bg-[#12084d] text-white z-20"> 
                     <div className="block" ref={dropdownRef}>
-                      <button onClick={() => setIsOpen(!isOpen)} className="flex cursor-pointer items-center w-full px-2 py-1 text-white hover:bg-gray-100 hover:text-gray-700 min-w-max text-center justify-center">
+                      <button onClick={() => setIsOpen(!isOpen)} className="flex cursor-pointer items-center w-full px-2 py-1 text-white hover:bg-gray-100 hover:text-gray-700 min-w-max text-center justify-center rounded-md">
                         <span className="text-md font-bold"> Kategorie </span>
                         <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                           <svg
@@ -181,17 +181,17 @@ export default function PriceTable() {
                           </button>
                         </div>
                       )}
-                      
+
                     </div>
-                    
+
                   </div>
-                  
+
                   <div className="w-full md:w-auto md:max-w-[calc(100vw/6)] md:flex-1 text-left">
-                    <form className="">
+                    <form>
                       <label htmlFor="simple-search" className="sr-only">Search</label>
                       <div className="relative w-full">
                         <div className="absolute inset-y-0 flex items-center pl-3 pointer-events-none">
-                          <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" className="w-4 h-4 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                           </svg>
                         </div>
@@ -199,7 +199,7 @@ export default function PriceTable() {
                           type="text"
                           id="simple-search"
                           placeholder="Szukaj"
-                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block min-w-[10rem] w-full pl-10 p-2"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block min-w-[10rem] w-full pl-10 p-1.5"
                           onChange={(event) => {
                             setSearchTerm(event.target.value);
                           }}
@@ -254,67 +254,72 @@ export default function PriceTable() {
                 </TableRow>
               );
             })}
-          </TableBody>
+          <TableRow>
+    <TableCell colSpan={6} className="text-right">
+          <div>
 
-        </Table>
-        )}
-        <div className="px-4 py-2">
-
-          <ol className="flex justify-end gap-1 text-xs font-medium">
-            <li>
-              <button
-                onClick={handlePrevPage}
-                className="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
-              >
-                <span className="sr-only">Prev Page</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-3 w-3"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </li>
-            {/* Generate the page numbers dynamically */}
-            {[...Array(totalPages).keys()].map((page) =>
-              <li key={page}>
+            <ol className="flex justify-start gap-1 text-xs font-medium">
+              <li>
                 <button
-                  onClick={() => setCurrentPage(page + 1)}
-                  className={`block size-8 rounded ${currentPage === page + 1 ? 'bg-violet-900 text-white' : 'border border-gray-100 bg-white text-gray-900'} text-center leading-8`}
+                  onClick={handlePrevPage}
+                  className="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
                 >
-                  {page + 1}
+                  <span className="sr-only">Prev Page</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-3 w-3"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
                 </button>
               </li>
-            )}
-            <li>
-              <button
-                onClick={handleNextPage}
-                className="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
-              >
-                <span className="sr-only">Next Page</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-3 w-3"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
+              {/* Generate the page numbers dynamically */}
+              {[...Array(totalPages).keys()].map((page) =>
+                <li key={page}>
+                  <button
+                    onClick={() => setCurrentPage(page + 1)}
+                    className={`block size-8 rounded ${currentPage === page + 1 ? 'bg-violet-900 text-white' : 'border border-gray-100 bg-white text-gray-900'} text-center leading-8`}
+                  >
+                    {page + 1}
+                  </button>
+                </li>
+              )}
+              <li>
+                <button
+                  onClick={handleNextPage}
+                  className="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </li>
-          </ol>
-        </div>
-        <div className="text-left text-white border-t border-gray-200 px-4 py-2">*Ceny są odświeżane z różną częstotliwością. Pracujemy nad możliwością dostarczania notowań w czasie rzeczywistym.</div>
+                  <span className="sr-only">Next Page</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-3 w-3"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </li>
+            </ol>
+            
+          </div>
+          </TableCell>
+  </TableRow>
+</TableBody>
+        </Table>
+        )}
+
+        <div className="text-left text-white px-4 py-4">*Ceny są odświeżane z różną częstotliwością. Pracujemy nad możliwością dostarczania notowań w czasie rzeczywistym.</div>
       </div>
     </section>
   )
