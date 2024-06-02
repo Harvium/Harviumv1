@@ -133,10 +133,10 @@ export default function PriceTable() {
           </div>
         ) : (<Table className='border-2 mt-1 text-xs text-center rounded-sm'>
           <TableHeader className="bg-[#12084d]/70">
-            <TableRow className>
-              <TableCell colSpan={2}>
-                <div className="grid xl:grid-cols-2 grid-flow-col gap-3 justify-center items-center w-auto">
-                  <div className=" xl:inline-flex w-1/4 bg-[#12084d] text-white z-20"> {/* Adjust the width here */}
+            <TableRow>
+              <TableCell colSpan={6}>
+                <div className="grid xl:grid-cols- grid-flow-col gap-3 justify-start items-center w-auto">
+                  <div className=" xl:inline-flex w-1/6 bg-[#12084d] text-white z-20"> {/* Adjust the width here */}
                     <div className="block" ref={dropdownRef}>
                       <button onClick={() => setIsOpen(!isOpen)} className="flex cursor-pointer items-center w-full px-2 py-1 text-white hover:bg-gray-100 hover:text-gray-700 min-w-max text-center justify-center">
                         <span className="text-md font-bold"> Kategorie </span>
@@ -181,10 +181,13 @@ export default function PriceTable() {
                           </button>
                         </div>
                       )}
+                      
                     </div>
+                    
                   </div>
-                  <div className="w-full md:w-auto md:max-w-[calc(100vw/6)] md:flex-1">
-                    <form className="flex items-center">
+                  
+                  <div className="w-full md:w-auto md:max-w-[calc(100vw/6)] md:flex-1 text-left">
+                    <form className="">
                       <label htmlFor="simple-search" className="sr-only">Search</label>
                       <div className="relative w-full">
                         <div className="absolute inset-y-0 flex items-center pl-3 pointer-events-none">
