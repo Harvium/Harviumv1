@@ -13,9 +13,9 @@ const ServiceMap = () => {
 
             <iframe
                 src="https://www.google.com/maps/d/u/0/embed?mid=1uMT-wyoVgApGS5MsrVl-4jXVET2K1OA&ehbc=2E312F&noprof=1"
-                width="90%"
+                width="100%"
                 height="540"
-                style={{filter: "hue-rotate(180deg) invert(90%)", maxWidth: "900px"}}
+                style={{filter: "hue-rotate(180deg) invert(90%)", maxWidth: "100%"}}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade">
             </iframe>
