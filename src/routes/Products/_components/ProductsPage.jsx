@@ -1,16 +1,16 @@
 import NavBar from '/src/layouts/NavBar';
 import Footer from "/src/layouts/Footer";
-import ProductItem from '/src/components/sub-components/ProductItem';
+import ProductItem from '/src/components/custom/Products/ProductItem';
 import Reveal from "@/components/animations/reveal/reveal.jsx";
 import Reveal2 from "@/components/animations/reveal/reveal2.jsx";
 import { Link } from 'react-router-dom';
-import { products, productUsers } from './_components/ProductData.js/index.js';
+import { products, productUsers } from '/src/routes/Products/_components/ProductData.js';
 
 
-const ProductPage = () => {
+const ProductsPage = () => {
   return (
     <>
-      <NavBar />
+   
 
       <div className='bg-background-primary'>
         <div className='flex flex-col justify-center px-5 md:px-16 py-16 md:py-28 text-white text-center'>
@@ -96,4 +96,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default ProductsPage;
