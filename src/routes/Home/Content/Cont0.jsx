@@ -30,8 +30,8 @@ const Cont0 = () => {
         <div className="flex justify-center">
           <div className="lg:w-1/2">
             <div className="text-white text-center">
-              <h1 className='text-4xl font-bold mb-0 mt-3'>Har<span className="text-yellow-500">v</span>ium</h1>
-              <h2 className="text-5xl font-light leading-tight text-transform capitalize mb-0 mt-3"><span className="element font-bold"></span></h2>
+              <h1 className='text-3xl font-bold mb-0 mt-3'>Har<span className="text-yellow-500">v</span>ium</h1>
+              <h2 className="text-4xl font-light leading-tight text-transform capitalize mb-0 mt-3"><span className="element font-bold"></span></h2>
               <div className="mt-4 flex justify-center">
                 <Link to="/Trade" className="md:hidden">
                   <ButtonTrade>Handluj</ButtonTrade>
