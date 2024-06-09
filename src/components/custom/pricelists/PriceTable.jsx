@@ -249,7 +249,6 @@ export default function PriceTable() {
                       {row.ProductName}
                     </Link>
                   </TableCell>
-                  <TableCell className="text-white py-1 whitespace-nowrap">{row.Data}</TableCell>
                   <TableCell className="text-white py-1">{row.AvgPrice}</TableCell>
                   <TableCell className={`${colorClass} py-1`}>{row.PercentChange}%</TableCell>
                   <TableCell className="text-white py-1">{(row.AvgPrice * 0.95).toFixed(2)}</TableCell>
