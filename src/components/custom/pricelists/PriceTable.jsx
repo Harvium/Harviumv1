@@ -112,7 +112,7 @@ export default function PriceTable() {
   }, [isOpen]);
 
   return (
-    <section className="px-4 mx-auto bg-background-primary p-3 sm:p-5">
+    <section className="mx-auto bg-background-primary p-3 sm:p-5">
       <div className='flex flex-col justify-center px-5 md:px-16 py-16 md:py-12 text-white text-center'>
         <h1 className='lg:text-4xl text-4xl font-bold items-center gap-6'>
           Handluj
