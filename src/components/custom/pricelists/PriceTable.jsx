@@ -220,11 +220,11 @@ export default function PriceTable() {
                   <path d="M8.45558 7.25664V7.40664H8.60558H9.66065C9.72481 7.40664 9.74667 7.42274 9.75141 7.42691C9.75148 7.42808 9.75146 7.42993 9.75116 7.43262C9.75001 7.44265 9.74458 7.46304 9.72525 7.49314C9.72522 7.4932 9.72518 7.49326 9.72514 7.49332L7.86959 10.3529L7.86924 10.3534C7.83227 10.4109 7.79863 10.418 7.78568 10.418C7.77272 10.418 7.73908 10.4109 7.70211 10.3534L7.70177 10.3529L5.84621 7.49332C5.84617 7.49325 5.84612 7.49318 5.84608 7.49311C5.82677 7.46302 5.82135 7.44264 5.8202 7.43262C5.81989 7.42993 5.81987 7.42808 5.81994 7.42691C5.82469 7.42274 5.84655 7.40664 5.91071 7.40664H6.96578H7.11578V7.25664V0.633865C7.11578 0.42434 7.29014 0.249976 7.49967 0.249976H8.07169C8.28121 0.249976 8.45558 0.42434 8.45558 0.633865V7.25664V0.633865Z" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
                 </svg>
               </TableHead>
-              <TableHead className="w-[50px] text-white text-center py-1 border-b-2" onClick={() => requestSort('Data')}>Data notowania</TableHead>
               <TableHead className="w-[50px] text-white text-center py-1 border-b-2" onClick={() => requestSort('AvgPrice')}>Ostatnia cena</TableHead>
               <TableHead className="w-[50px] text-white text-center py-1 border-b-2" onClick={() => requestSort('PercentChange')}>Zmiana</TableHead>
               <TableHead className="w-[50px] text-white text-center py-1 border-b-2" onClick={() => requestSort('AvgPrice')}>Cena kupna</TableHead>
               <TableHead className="w-[50px] text-white text-center py-1 border-b-2" onClick={() => requestSort('AvgPrice')}>Cena sprzedaży</TableHead>
+            <TableHead className="w-[50px] text-white text-center py-1 border-b-2" onClick={() => requestSort('Data')}>Data notowania</TableHead>
             </TableRow>
           </TableHeader>
 
@@ -246,11 +246,11 @@ export default function PriceTable() {
                       {row.ProductName}
                     </Link>
                   </TableCell>
-                  <TableCell className="text-white py-1 whitespace-nowrap">{row.Data}</TableCell>
                   <TableCell className="text-white py-1">{row.AvgPrice}</TableCell>
                   <TableCell className={`${colorClass} py-1`}>{row.PercentChange}%</TableCell>
                   <TableCell className="text-white py-1">{(row.AvgPrice * 0.95).toFixed(2)}</TableCell>
                   <TableCell className="text-white py-1">{(row.AvgPrice * 1.05).toFixed(2)}</TableCell>
+                  <TableCell className="text-white py-1 whitespace-nowrap">{row.Data}</TableCell>
                 </TableRow>
               );
             })}
