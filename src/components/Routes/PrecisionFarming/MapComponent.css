@@ -1,0 +1,29 @@
+.custom-leaflet-container .leaflet-draw-toolbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .custom-leaflet-container .leaflet-draw-toolbar.leaflet-bar {
+    box-shadow: none;
+  }
+  
+  .custom-leaflet-container .leaflet-draw-toolbar-top {
+    top: 70px; /* Adjust as needed */
+  }
+  
+  .custom-leaflet-container .leaflet-draw-section {
+    background-color: rgba(9, 14, 46, 0.7);
+    border-radius: 4px;
+  }
+  
+  .custom-leaflet-container .leaflet-draw-section a {
+    color: white;
+  }
+  
+  .custom-leaflet-container .leaflet-draw-actions a {
+    background-color: rgba(9, 14, 46, 0.7);
+    color: white;
+  }
+  
+  

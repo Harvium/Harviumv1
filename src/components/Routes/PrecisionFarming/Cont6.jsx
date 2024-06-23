@@ -3,6 +3,9 @@ import Reveal from "@/components/animations/reveal/reveal";
 import Map from "./Map.jsx"
 import Map2 from "./Map2.jsx"
 import Map3 from "./Map3.jsx"
+import Map7 from "./Map7.jsx"
+import Map9 from "./Map9.jsx"
+
 // import Map_time_slider from "./Map_time_slider.jsx"
 import SimpleMapComponent from './SimpleMapComponent.jsx';
 import L from 'leaflet';
@@ -27,7 +30,7 @@ const Cont6 = () => {
                     >
                         Mapa demo
                     </button>
-                    {showMap && <div className="map-container"><Map3 /></div>} 
+                    {showMap && <div className="map-container"><Map9 /></div>} 
                 </div>
             </Reveal>
             
