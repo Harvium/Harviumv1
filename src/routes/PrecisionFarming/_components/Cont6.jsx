@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Reveal from "@/components/animations/reveal/reveal";
 import Map3 from "./Map3.jsx"
 import Map9 from "./Map9.jsx"
+import Map10 from "./Map10.jsx"
 // import Map_time_slider from "./Map_time_slider.jsx"
 import 'leaflet/dist/leaflet.css';
 import './Map.css';
@@ -23,7 +24,7 @@ const Cont6 = () => {
                     >
                         Mapa demo
                     </button>
-                    {showMap && <div className="map-container m-4"><Map9 /></div>} 
+                    {showMap && <div className="map-container m-4"><Map10 /></div>} 
                 </div>
             </Reveal>
             
