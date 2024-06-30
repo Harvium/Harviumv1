@@ -23,7 +23,7 @@ const Cont6 = () => {
                     >
                         Mapa demo
                     </button>
-                    {showMap && <div className="map-container m-4"><Map4 /></div>} 
+                    {showMap && <div className="map-container m-4"><Map10 /></div>} 
                 </div>
             </Reveal>
             

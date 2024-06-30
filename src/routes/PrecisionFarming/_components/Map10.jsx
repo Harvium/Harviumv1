@@ -15,10 +15,9 @@ const MapComponent = () => {
   const [email, setEmail] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [requestId, setRequestId] = useState(0);
 
   // Define the API URL for testing
-  const apiUrl = 'TUTJ URL DO AWS';
+  const apiUrl = 'https://y09mrrf3dk.execute-api.eu-central-1.amazonaws.com/v1/SaveCoordinatestoDynamo';
 
   useEffect(() => {
     if (!mapRef.current) {
@@ -121,19 +120,32 @@ const MapComponent = () => {
       setShowSuccess(false);
     }, 5000);
 
-    // Generate a unique request ID
-    const uniqueRequestId = requestId + 1;
-    setRequestId(uniqueRequestId);
 
-    // Get the current timestamp
-    const timestamp = new Date().toISOString();
+
+    // Current timestamp
+  let dateObj = new Date();
+  const timestamp = dateObj.getUTCFullYear() + '-' + 
+    (dateObj.getUTCMonth() + 1).toString().padStart(2, '0') + '-' + 
+    dateObj.getUTCDate().toString().padStart(2, '0') + ' ' + 
+    dateObj.getUTCHours().toString().padStart(2, '0') + ':' + 
+    dateObj.getUTCMinutes().toString().padStart(2, '0') + ':' + 
+    dateObj.getUTCSeconds().toString().padStart(2, '0') + '.' + 
+    dateObj.getUTCMilliseconds().toString().padStart(3, '0');
+
+  let date = timestamp.split(' ')[0];
+
+
+    // Prepare longitude and latitude
+    const latitude = polygonCoordinates.map(coord => coord[0])
+    const longitude = polygonCoordinates.map(coord => coord[1])
 
     // Prepare the data to be sent
     const data = {
-      email: email,
-      requestId: uniqueRequestId,
-      timestamp: timestamp,
-      points: polygonCoordinates
+      Email: email,
+      Date: date,
+      Timestamp: timestamp,
+      Latitude: latitude,
+      Longitude: longitude
     };
 
     try {
@@ -147,6 +159,7 @@ const MapComponent = () => {
 
       if (response.ok) {
         const responseData = await response.json();
+        console.log(`Response status code: ${response.status}`);
         console.log('Data stored successfully:', responseData);
       } else {
         console.error('Failed to store data:', response.statusText);
@@ -156,7 +169,10 @@ const MapComponent = () => {
     }
 
     // Log the sending action
+    
     console.log(`Sending coordinates: ${JSON.stringify(polygonCoordinates)}`);
+
+    console.log(`Data that has been send: ${JSON.stringify(data)}`);
   };
 
   const handleConfirmBack = () => {
