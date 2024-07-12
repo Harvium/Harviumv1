@@ -1,11 +1,33 @@
 import React, { useState } from "react";
 
 const FORM_ENDPOINT = 'https://forms.zohopublic.eu/harvium/form/HarviumKontakt/formperma/p_g2EZSP148Jb4T5qgwQivEfD_lI-Shg7-OlvRd18wQ/htmlRecords/submit';
-
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
+
+  const handleEmailChange = (event) => {
+    const { value } = event.target;
+    setEmail(value);
+
+    if (!validateEmail(value)) {
+      setEmailError("Invalid email address");
+    } else {
+      setEmailError("");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (emailError) {
+      return;
+    }
 
     const inputs = e.target.elements;
     const data = {};
@@ -32,7 +54,6 @@ const ContactForm = () => {
         setSubmitted(true);
       })
       .catch((err) => {
-        // Submit the form manually
         console.log(err)
         e.target.submit();
       });
@@ -113,7 +134,10 @@ const ContactForm = () => {
                     placeholder="Adres email"
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={handleEmailChange}
                   />
+                  {emailError && <p className="error">{emailError}</p>}
                 </div>
 
                 <div>
@@ -127,34 +151,7 @@ const ContactForm = () => {
                   />
                 </div>
               </div>
-              {/*}
-              <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="Option1"
-                    className="bg-purple-900 block w-full cursor-pointer rounded-lg border border-white p-3 text-white hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                    tabIndex="0"
-                  >
-                    <input className="sr-only" id="Option1" type="radio" tabIndex="-1" name="option" />
 
-                    <span className="text-sm"> Działalność gospodarcza </span>
-                  </label>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="Option2"
-                    className="bg-purple-900 block w-full cursor-pointer rounded-lg border border-white p-3 text-white hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                    tabIndex="0"
-                  >
-                    <input className="sr-only" id="Option2" type="radio" tabIndex="-1" name="option" />
-
-                    <span className="text-sm"> Osoba fizyczna </span>
-                  </label>
-                </div>
-                
-              </div>
-*/}
               <div>
                 <label className="sr-only" htmlFor="message">Message</label>
 
@@ -185,4 +182,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
