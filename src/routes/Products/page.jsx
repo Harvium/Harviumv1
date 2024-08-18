@@ -15,7 +15,7 @@ function ProductsList() {
       <Helmet>
         <title>Produkty</title>
         <meta name="description" content="W naszej ofercie znajduje się wiele popularnych produktów rolniczych, mleczarskich oraz indeksów. Handlujemy również półproduktami oraz indeksami. Na chwilę obecną prowadzimy tylko indywidualną obsługę. Skontaktuj się z nami." />
-        <link rel='canonical' href='/Produkty'></link>
+        <link rel='canonical' href='/Trade'></link>
       </Helmet>
         <NavBar />
         <PriceTable />

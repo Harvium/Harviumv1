@@ -16,9 +16,9 @@ const ContactForm = () => {
     setEmail(value);
 
     if (!validateEmail(value)) {
-      setEmailError("Invalid email address");
+      setEmailError("Błędny adres e-mail");
     } else {
-      setEmailError("");
+      setEmailError("Brak adresu e-mail");
     }
   };
 
@@ -74,14 +74,12 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12 lg:border-r lg:border-gray-200">
             <p className="max-w-xl text-2xl text-white font-bold">
-              Nie widzisz określonego produktu, który Cię interesuje?
+              Potrzebujesz indywidualnej obsługi?
             </p>
-            <p className="mt-2 text-lg not-italic text-gray-200">
-              Poszukujesz najlepszej ceny na rynku? Potrzebujesz indywidualnej obsługi?
-            </p>
+            
 
             <div className="mt-8">
-              <p className="text-2xl font-bold text-white">Jesteśmy dla Ciebie.</p>
+              <p className="text-xl font-bold text-white">Jesteśmy dla Ciebie.</p>
 
               <p className="mt-2 text-lg not-italic text-gray-200">Skorzystaj z formularza, a my zatroszczymy się o profesjonalną obsługę Twojego zgłoszenia.</p>
             </div>
@@ -118,7 +116,7 @@ const ContactForm = () => {
                 <input
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
                   name="SingleLine"
-                  placeholder="Nazwa firmy"
+                  placeholder="Nazwa firmy (opcjonalnie)"
                   type="text"
                   id="Company_Name"
                 />
@@ -145,7 +143,7 @@ const ContactForm = () => {
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
                     name="PhoneNumber_countrycodeval"
-                    placeholder="Numer telefonu"
+                    placeholder="Numer telefonu (opcjonalnie)"
                     type="tel"
                     id="PhoneNumber_countrycode"
                   />

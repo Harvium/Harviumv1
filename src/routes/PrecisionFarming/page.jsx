@@ -25,7 +25,7 @@ function PrecisionFarming() {
         <Cont3 />
         <Cont4 />
         <Cont5 />
-        <Cont5b />
+       
         <Cont6 /> 
         <Footer />
         <ScrollingBar />

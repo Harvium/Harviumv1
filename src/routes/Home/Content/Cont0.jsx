@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Cont0 = () => {
   useEffect(() => {
     const options = {
-      strings: ['Platforma handlowa.', 'Najlepsze ceny.', 'Wsparcie dla rolników.', 'Rolnictwo precyzyjne.', 'Transparentność rynków.','Niezależne wiadomości.', 'Dla Ciebie.'],
+      strings: ['Platforma handlowa.', 'Najlepsze ceny.', 'Wsparcie dla rolników.', 'Rolnictwo precyzyjne.', 'Transparentność rynków.','Niezależne wiadomości.', 'Dla Ciebie.', 'Zakwotujemy każdy produkt!'],
       typeSpeed: 100,
       backDelay: 2000,
     };
