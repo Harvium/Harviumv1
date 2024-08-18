@@ -17,7 +17,7 @@ export default function Modal() {
 
   return (
     <>
-      <button onClick={toggleModal} className="rounded-md bg-white px-5 py-2.5 text-sm font-medium text-navyblue shadow dark:hover:bg-teal-500">
+      <button onClick={toggleModal} className="rounded-md bg-white px-4 py-2.5 text-sm font-medium text-black shadow hover:bg-gray-200">
         Logowanie
       </button>
 
@@ -27,13 +27,30 @@ export default function Modal() {
           <div className="modal-content">
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
   <div className="mx-auto max-w-lg">
-    <h1 className="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">Panel logowania nie jest jeszcze gotowy</h1>
+    <h1 className="text-center text-2xl font-bold text-white sm:text-3xl">Zaloguj lub zarejestruj się klikając w poniższy przycisk.</h1>
 
     <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
-      Możesz jednak skontaktować się z nami poprzez zakładkę "Kontakt".
+    Rejestrując się uzyskasz dostęp do notowań produktów, możliwości dodawania ogłoszeń i zawierania transakcji. 
     </p>
+    <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
+    Ponadto uzyskasz dostęp do sklepu, wiadomości, raportów oraz narzędzi rolnictwa precyzyjnego. 
+    </p>
+    <div className="flex justify-center mt-4">
+    <Link to ="https://app.harvium.pl/">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Zaloguj / Zarejestruj się 
+        </button>
+        </Link>
+      </div>    
+      <div className="mx-auto mt-4 max-w-md text-center text-white">
+    Dostęp do platformy jest bezpłatny, a pozostałe koszty zostały wymienione przy usługach i w {' '}
+      <Link to ="/TermsOfUse" className="underline hover:no-underline text-blue-500">
+        regulaminie
+      </Link>
+      .
+    </div>
 
-    <form action="#" className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
+    {/*<form action="#" className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
       <p className="text-center text-lg font-medium">...</p>
 
       <div>
@@ -109,7 +126,7 @@ export default function Modal() {
 
       <p className="text-center text-sm text-gray-500">
         ...
-      {/*  <Link className="underline" to="/#">...</Link> */}
+      <Link className="underline" to="/#">...</Link>
       </p>
       <button 
     className="inline-block rounded-full border-2 border-solid border-indigo-600 p-3 text-indigo-600 text-xs font-bold hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500" 
@@ -119,6 +136,8 @@ export default function Modal() {
     X
 </button>
     </form>
+    */}
+
   </div>
 </div>
            

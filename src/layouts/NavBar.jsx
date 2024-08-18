@@ -7,9 +7,9 @@ import ModalRegister from '../components/custom/Login/ModalRegister.jsx';
 
 export default function NavBar() {
   return (
-    <header className="bg-[#080E2D] dark:bg-[#080E2D]-900 sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-99 z-50" >
+    <header className="bg-[#080E2D] dark:bg-[#080E2D] sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-99 z-50" >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-14 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
             <Link className="block text-teal-600 dark:text-teal-600" to="/">
               <span className="sr-only">Home</span>

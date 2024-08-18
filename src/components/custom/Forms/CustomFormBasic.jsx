@@ -1,11 +1,33 @@
 import React, { useState } from "react";
 
 const FORM_ENDPOINT = 'https://forms.zohopublic.eu/harvium/form/HarviumKontakt/formperma/p_g2EZSP148Jb4T5qgwQivEfD_lI-Shg7-OlvRd18wQ/htmlRecords/submit';
-
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
+
+  const handleEmailChange = (event) => {
+    const { value } = event.target;
+    setEmail(value);
+
+    if (!validateEmail(value)) {
+      setEmailError("Błędny adres e-mail");
+    } else {
+      setEmailError("Brak adresu e-mail");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (emailError) {
+      return;
+    }
 
     const inputs = e.target.elements;
     const data = {};
@@ -32,7 +54,6 @@ const ContactForm = () => {
         setSubmitted(true);
       })
       .catch((err) => {
-        // Submit the form manually
         console.log(err)
         e.target.submit();
       });
@@ -53,14 +74,12 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12 lg:border-r lg:border-gray-200">
             <p className="max-w-xl text-2xl text-white font-bold">
-              Nie widzisz określonego produktu, który Cię interesuje?
+              Potrzebujesz indywidualnej obsługi?
             </p>
-            <p className="mt-2 text-lg not-italic text-gray-200">
-              Poszukujesz najlepszej ceny na rynku? Potrzebujesz indywidualnej obsługi?
-            </p>
+            
 
             <div className="mt-8">
-              <p className="text-2xl font-bold text-white">Jesteśmy dla Ciebie.</p>
+              <p className="text-xl font-bold text-white">Jesteśmy dla Ciebie.</p>
 
               <p className="mt-2 text-lg not-italic text-gray-200">Skorzystaj z formularza, a my zatroszczymy się o profesjonalną obsługę Twojego zgłoszenia.</p>
             </div>
@@ -97,7 +116,7 @@ const ContactForm = () => {
                 <input
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
                   name="SingleLine"
-                  placeholder="Nazwa firmy"
+                  placeholder="Nazwa firmy (opcjonalnie)"
                   type="text"
                   id="Company_Name"
                 />
@@ -113,7 +132,10 @@ const ContactForm = () => {
                     placeholder="Adres email"
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={handleEmailChange}
                   />
+                  {emailError && <p className="error">{emailError}</p>}
                 </div>
 
                 <div>
@@ -121,40 +143,13 @@ const ContactForm = () => {
                   <input
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
                     name="PhoneNumber_countrycodeval"
-                    placeholder="Numer telefonu"
+                    placeholder="Numer telefonu (opcjonalnie)"
                     type="tel"
                     id="PhoneNumber_countrycode"
                   />
                 </div>
               </div>
-              {/*}
-              <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="Option1"
-                    className="bg-purple-900 block w-full cursor-pointer rounded-lg border border-white p-3 text-white hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                    tabIndex="0"
-                  >
-                    <input className="sr-only" id="Option1" type="radio" tabIndex="-1" name="option" />
 
-                    <span className="text-sm"> Działalność gospodarcza </span>
-                  </label>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="Option2"
-                    className="bg-purple-900 block w-full cursor-pointer rounded-lg border border-white p-3 text-white hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                    tabIndex="0"
-                  >
-                    <input className="sr-only" id="Option2" type="radio" tabIndex="-1" name="option" />
-
-                    <span className="text-sm"> Osoba fizyczna </span>
-                  </label>
-                </div>
-                
-              </div>
-*/}
               <div>
                 <label className="sr-only" htmlFor="message">Message</label>
 
@@ -185,4 +180,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-

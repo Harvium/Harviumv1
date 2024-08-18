@@ -243,27 +243,23 @@ const MapComponent = () => {
 
   return (
     <div>
-      <div id="mapid" style={{ width: '100%', height: '100vh' }}></div>
+      <div id="mapid" style={{ width: '100%', height: '50vh' }}></div>
       <div style={{ position: 'absolute', top: '100px', left: '10px', zIndex: 1000, padding: '5px' }}>
-        {['base', 'NDVI', 'SWIR', 'TrueColor', 'SoilIndex', 'MoistureIndex'].map((layer) =>
+        {['Mapa podstawowa', 'NDVI', 'SWIR', 'TrueColor', 'Stan gleby', 'Wilgotność'].map((layer) =>
           <button key={layer} style={buttonStyle(activeLayer === layer)} onClick={() => switchLayer(layer)}>
             {layer.replace(/([A-Z])/g, ' $1').trim()}  {/* Add spaces before capital letters for better readability */}
           </button>
         )}
       </div>
-      <div style={{ position: 'absolute', top: '100px', right: '10px', zIndex: 1000, padding: '5px' }}>
-        <button style={buttonStyle(drawing)} onClick={toggleDrawing}>
-          {drawing ? 'Stop Drawing' : 'Draw your field'}
-        </button>
-      </div>
+      
       {polygonCoordinates.length > 0 && (
         <div style={{ position: 'absolute', bottom: '10px', right: '10px', zIndex: 1000, padding: '10px', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '4px', width: '250px' }}>
-          <h4 style={{ margin: 0, color: 'rgba(9, 14, 46, 0.7)', textAlign: 'center', fontWeight: 'bold' }}>Polygon Coordinates</h4>
+          <h4 style={{ margin: 0, color: 'rgba(9, 14, 46, 0.7)', textAlign: 'center', fontWeight: 'bold' }}>Współrzędne obszaru</h4>
           <table style={tableStyle}>
             <thead>
               <tr>
-                <th style={thStyle}>Lat</th>
-                <th style={thStyle}>Lng</th>
+                <th style={thStyle}>Szerokość</th>
+                <th style={thStyle}>Długość</th>
               </tr>
             </thead>
             <tbody>
@@ -283,18 +279,18 @@ const MapComponent = () => {
             style={inputStyle}
           />
           <button style={buttonStyle(true)} onClick={handleSendClick}>
-            Send
+            Wyślij
           </button>
         </div>
       )}
       {showConfirmation && (
         <div style={popupStyle}>
-          <p>Do you want to send the polygon coordinates?</p>
+          <p>Czy chcesz wysłać wspołrzędne?</p>
           <button style={buttonStyle(true)} onClick={handleConfirmYes}>
-            Yes
+            Tak
           </button>
           <button style={buttonStyle(false)} onClick={handleConfirmBack}>
-            Back
+            Powrót
           </button>
         </div>
       )}
