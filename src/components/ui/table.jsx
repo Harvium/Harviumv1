@@ -3,10 +3,10 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 const Table = React.forwardRef(({ className, ...props }, ref) => (
-  <div className={cn("relative w-full overflow-auto", className)}>
+  <div className="relative w-full overflow-auto">
     <table
       ref={ref}
-      className="w-full caption-bottom text-sm"
+      className={cn("w-full caption-bottom text-sm", className)}
       {...props} />
   </div>
 ))
@@ -37,7 +37,7 @@ const TableRow = React.forwardRef(({ className, ...props }, ref) => (
   <tr
     ref={ref}
     className={cn(
-      "border-b transition-colors data-[state=selected]:bg-muted",
+      "border-b border-foreground/30 transition-colors data-[state=selected]:bg-muted",
       className
     )}
     {...props} />

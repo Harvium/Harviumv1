@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
@@ -9,6 +9,10 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    backgroundImage: theme => ({
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      'gradient-linear': 'linear-gradient(90deg, var(--tw-gradient-stops))',
+    }),
     container: {
       center: true,
       padding: "2rem",
@@ -49,32 +53,52 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+          foreground: "hsl(var(--primary-foreground) / <alpha-value>)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(var(--secondary / <alpha-value>))",
+          foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hsl(var(--destructive / <alpha-value>))",
+          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "hsl(var(--muted) / <alpha-value>)",
+          foreground: "hsl(var(--muted-foreground) / <alpha-value>)",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+          foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
+        },
+        accent2: {
+          DEFAULT: "hsl(var(--accent2) / <alpha-value>)",
+          foreground: "hsl(var(--accent2-foreground) / <alpha-value>)",
+        },
+        accent3: {
+          DEFAULT: "hsl(var(--accent3) / <alpha-value>)",
+          foreground: "hsl(var(--accent3-foreground) / <alpha-value>)",
+        },
+        table: {
+          DEFAULT: "hsl(var(--table) / <alpha-value>)",
+          foreground: "hsl(var(--table-foreground) / <alpha-value>)",
+        },
+        tablerow: {
+          DEFAULT: "hsl(var(--tablerow) / <alpha-value>)",
+          foreground: "hsl(var(--tablerow-foreground) / <alpha-value>)",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "hsl(var(--popover) / <alpha-value>)",
+          foreground: "hsl(var(--popover-foreground) / <alpha-value>)",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "hsl(var(--card) / <alpha-value>)",
+          foreground: "hsl(var(--card-foreground) / <alpha-value>)",
+        },
+        buttons: {
+          DEFAULT: "hsl(var(--buttons) / <alpha-value>)",
+          foreground: "hsl(var(--accent-buttons) / <alpha-value>)",
         },
       },
       borderRadius: {
@@ -112,7 +136,21 @@ module.exports = {
       },
     },
   },
+
   plugins: [require("tailwindcss-animate"),
   require('@tailwindcss/forms'),
+  function({ addUtilities }) {
+    const newUtilities = {
+      '.gradient-start': {
+        '--tw-gradient-stops': 'var(--tw-gradient-from), var(--tw-gradient-to, transparent)',
+      },
+      '.gradient-end': {
+        '--tw-gradient-stops': 'var(--tw-gradient-from), var(--tw-gradient-via, transparent), var(--tw-gradient-to, transparent)',
+      },
+    }
+
+    addUtilities(newUtilities, ['responsive', 'hover'])
+  }
+  
 ]
 }

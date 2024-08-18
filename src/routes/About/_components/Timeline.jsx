@@ -21,7 +21,7 @@ function Timeline() {
 					</div>
 					<div className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-violet-800">
 						<h3 className="text-xl font-semibold tracking-wide">Platforma handlowa i moduł rolnictwa precyzyjnego</h3>
-						<time className="text-xs tracking-wide uppercase text-gray-400">CZERWIEC 2024</time>
+						<time className="text-xs tracking-wide uppercase text-gray-400">WRZESIEŃ 2024</time>
 						<p className="mt-3">Do użytku przedsiębiorstw i klientów detalicznych zostaną uruchomione platforma i rynek do obrotu produktami spożywczymi. Kolejne kategorie produktów będą udostępniane w nadchodzących okresach. Ponadto każdy będzie mógł skorzystać z panelu do analizy określonego obszaru geograficznego.</p>
 					</div>
 					<div className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-violet-800">
@@ -31,13 +31,18 @@ function Timeline() {
 					</div>
 					<div className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-violet-800">
 						<h3 className="text-xl font-semibold tracking-wide">Udostępnimy moduły API</h3>
-						<time className="text-xs tracking-wide uppercase text-gray-400">Wrzesień 2024</time>
+						<time className="text-xs tracking-wide uppercase text-gray-400">PAŹDZIERNIK 2024</time>
 						<p className="mt-3">Zapewnimy możliwość bezpośredniego dostępu do systemów dla autoryzowanych przedsiębiorstw.</p>
 					</div>
 					<div className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-violet-800">
 						<h3 className="text-xl font-semibold tracking-wide">Transport i ekspansja</h3>
 						<time className="text-xs tracking-wide uppercase text-gray-400">Listopad 2024</time>
-						<p className="mt-3">Udostępnimy dodatkowe formy transportu i pomożemy naszym klientom w rozwoju działalności na rynkach zagranicznych.</p>
+						<p className="mt-3">Udostępnimy dodatkowe formy transportu i pomożemy naszym klientom w rozwoju działalności na rynkach zagranicznych. Rozwiniemy zakres naszej działalności poprzez wprowadzenie kontraktów terminowych.</p>
+					</div>
+					<div className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-violet-800">
+						<h3 className="text-xl font-semibold tracking-wide">Obecność w Europie</h3>
+						<time className="text-xs tracking-wide uppercase text-gray-400">CZERWIEC 2025</time>
+						<p className="mt-3">Z naszych produktów będzie mógł skorzystać każdy na terenie całej Europy.</p>
 					</div>
 				</div>
 			</div>
