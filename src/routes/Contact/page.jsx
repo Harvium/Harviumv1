@@ -16,8 +16,9 @@ export default function ContactPage() {
         <link rel='canonical' href='/Contact'></link>
       </Helmet>
       <NavBar />
-      <ContactUs />
       <ContactFooter />
+      <ContactUs />
+      
       <Footer />
       <ScrollingBar />
     </>
