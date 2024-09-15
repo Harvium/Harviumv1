@@ -19,7 +19,6 @@ function ProductsList() {
       </Helmet>
         <NavBar />
         <PriceTable />
-        <ContactUs />
         <Footer />
         <ScrollingBar />
       </div>
