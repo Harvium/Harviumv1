@@ -21,7 +21,7 @@ export default function PriceTable() {
   const [itemsPerPage, setItemsPerPage] = useState(15);
 
   useEffect(() => {
-    axios.get('https://7g3fm3diw6.execute-api.eu-central-1.amazonaws.com/DEV/ProductPrices')
+    axios.get('https://s2mj1vn9e2.execute-api.eu-central-1.amazonaws.com/V1/ProductPrices')
       .then((response) => {
         setData(response.data);
         setIsLoading(false);
@@ -48,7 +48,7 @@ export default function PriceTable() {
     return sortableData;
   }, [data, sortConfig]);
 
-  const filteredData = sortedData.filter((row) => row.ProductName.toLowerCase().includes(searchTerm.toLowerCase()) && (category === 'all' || row.Category === category));
+  const filteredData = sortedData.filter((row) => row.NazwaProduktu.toLowerCase().includes(searchTerm.toLowerCase()) && (category === 'all' || row.Category === category));
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -110,7 +110,7 @@ export default function PriceTable() {
           {page}
         </button>
       ) : (
-        <span className="block size-8 text-white text-center leading-8">{page}</span>
+        <span className="block size-8 text-foreground text-center leading-8">{page}</span>
       )}
     </li>
     ));
@@ -143,11 +143,32 @@ export default function PriceTable() {
     };
   }, [isOpen]);
 
-  const truncateProductName = (name) => {
+  const truncateNazwaProduktu = (name) => {
     if (name.length > 25) {
-      return name.slice(0, 25) + '...';
+      return name.slice(0, 17) + '...';
     }
     return name;
+  };
+
+  const slugify = (text) => {
+    // Map of Polish characters to their ASCII equivalents
+    const polishCharMap = {
+      'ą': 'a', 'ć': 'c', 'ę': 'e', 'ł': 'l',
+      'ń': 'n', 'ó': 'o', 'ś': 's', 'ż': 'z', 'ź': 'z'
+    };
+  
+    // Replace Polish characters with their equivalents
+    const replacedText = text.replace(/[ąćęłńóśżź]/g, char => polishCharMap[char] || char);
+  
+    // Regular slugification process
+    return replacedText
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, '-')          // Replace spaces with dashes
+      .replace(/[^\w\-]+/g, '')      // Remove all non-word characters
+      .replace(/\-\-+/g, '-')        // Replace multiple dashes with a single dash
+      .replace(/^-+/, '')            // Trim dashes from the start
+      .replace(/-+$/, '');           // Trim dashes from the end
   };
 
   return (
@@ -232,7 +253,7 @@ export default function PriceTable() {
                 </TableCell>
               </TableRow>
               <TableRow>
-                <TableHead className="w-[50px] sm:w-[30px] md:w-[50px] text-foreground py-1 border-b-4 border-foreground/30 " onClick={() => requestSort('ProductName')}>
+                <TableHead className="w-[50px] sm:w-[30px] md:w-[50px] text-foreground py-1 border-b-4 border-foreground/30 " onClick={() => requestSort('NazwaProduktu')}>
                   <span>Produkt</span>
                   <svg className="h-3 inline-block ml-1" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.13347 0.0999756H2.98516L5.01902 4.79058H3.86226L3.45549 3.79907H1.63772L1.24366 4.79058H0.0996094L2.13347 0.0999756ZM2.54025 1.46012L1.96822 2.92196H3.11227L2.54025 1.46012Z" fill="currentColor" stroke="currentColor" stroke-width="0.1" />
@@ -240,11 +261,11 @@ export default function PriceTable() {
                     <path d="M8.45558 7.25664V7.40664H8.60558H9.66065C9.72481 7.40664 9.74667 7.42274 9.75141 7.42691C9.75148 7.42808 9.75146 7.42993 9.75116 7.43262C9.75001 7.44265 9.74458 7.46304 9.72525 7.49314C9.72522 7.4932 9.72518 7.49326 9.72514 7.49332L7.86959 10.3529L7.86924 10.3534C7.83227 10.4109 7.79863 10.418 7.78568 10.418C7.77272 10.418 7.73908 10.4109 7.70211 10.3534L7.70177 10.3529L5.84621 7.49332C5.84617 7.49325 5.84612 7.49318 5.84608 7.49311C5.82677 7.46302 5.82135 7.44264 5.8202 7.43262C5.81989 7.42993 5.81987 7.42808 5.81994 7.42691C5.82469 7.42274 5.84655 7.40664 5.91071 7.40664H6.96578H7.11578V7.25664V0.633865C7.11578 0.42434 7.29014 0.249976 7.49967 0.249976H8.07169C8.28121 0.249976 8.45558 0.42434 8.45558 0.633865V7.25664Z" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
                   </svg>
                 </TableHead>
-                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('AvgPrice')}>Ostatnia cena</TableHead>
+                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('Price')}>Ostatnia cena</TableHead>
                 <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('PercentChange')}>Zmiana</TableHead>
-                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('AvgPrice')}>Cena kupna</TableHead>
-                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('AvgPrice')}>Cena sprzedaży</TableHead>
-                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('Data')}>Data notowania</TableHead>
+                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('Price')}>Cena kupna</TableHead>
+                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('Price')}>Cena sprzedaży</TableHead>
+                <TableHead className="w-[50px] text-foreground text-center py-1 border-b-4 border-foreground/30" onClick={() => requestSort('Time')}>Data notowania</TableHead>
               </TableRow>
             </TableHeader>
 
@@ -271,15 +292,15 @@ export default function PriceTable() {
                   <TableRow key={index} className={`cursor-pointer hover:bg-tablerow/70 ${index % 2 === 0 ? 'bg-tablerow/50' : 'bg-tablerow/20'}`}>
                     <TableCell className="font-medium text-foreground py-1 text-left whitespace-nowrap w-[200px]">
   <Link to="https://app.harvium.pl/">
-    {truncateProductName(row.ProductName)}
+    {truncateNazwaProduktu(row.NazwaProduktu)}
   </Link>
 </TableCell>
-                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{row.AvgPrice}</Link></TableCell>
+                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{row.Price}</Link></TableCell>
                     <TableCell className={`${colorClass} py-1 whitespace-nowrap`}><Link to="https://app.harvium.pl">{row.PercentChange}%</Link></TableCell>
-                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{(row.AvgPrice * 0.95).toFixed(2)}</Link></TableCell>
-                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{(row.AvgPrice * 1.05).toFixed(2)}</Link></TableCell>
-                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{row.Data}</Link></TableCell>
-                  </TableRow>
+                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{(row.Price * 0.95).toFixed(2)}</Link></TableCell>
+                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{(row.Price * 1.05).toFixed(2)}</Link></TableCell>
+                    <TableCell className="text-foreground py-1 whitespace-nowrap"><Link to="https://app.harvium.pl">{row.Time}</Link></TableCell>
+                   </TableRow>
                 );
               })}
               <TableRow>
